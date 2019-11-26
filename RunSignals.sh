@@ -8,4 +8,6 @@ tmux split-window "eval \`scramv1 runtime -sh\` && python CreateDatacard.py --An
 tmux select-layout even-vertical
 tmux split-window "eval \`scramv1 runtime -sh\` && python CreateDatacard.py --AnalysisConfigFiles AnalysisCategories/UserAnalysisCategories/*_Config.py --SampleConfigFiles Samples/UserSamples/"$1"/ZHConfig.py  --OutputFileName "$1"_ZH.root"
 tmux select-layout even-vertical
+tmux split-window "eval \`scramv1 runtime -sh\` && python CreateDatacard.py --AnalysisConfigFiles AnalysisCategories/UserAnalysisCategories/*_Config.py --SampleConfigFiles Samples/UserSamples/"$1"/ggHConfig.py  --OutputFileName "$1"_ggH.root"
+tmux select-layout even-vertical
 python CreateDatacard.py --AnalysisConfigFiles AnalysisCategories/UserAnalysisCategories/*_Config.py --SampleConfigFiles Samples/UserSamples/"$1"/VBFConfig.py  --OutputFileName $1_VBF.root
