@@ -6,8 +6,7 @@ def IsInZeroJetLowCategory(theAnalysisCategory,theEventDictionary):
             theEventDictionary.eventDictionary['TauPt'] >= 30.0
             and theEventDictionary.eventDictionary['MT'] < 50.0
             and theEventDictionary.eventDictionary['Njets'] == 0
-            and theEventDictionary.eventDictionary['HiggsPt'] <= 10.0
-            and theEventDictionary.eventDictionary['HiggsPt'] > 0.0
+            and theEventDictionary.eventDictionary['DeltaR'] > 3.0
     ):
         return True
     else:
