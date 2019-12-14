@@ -14,7 +14,9 @@ class TESUncertainty(Uncertainty):
             "CMS_scale_t_1prong1pizeroUp",
             "CMS_scale_t_1prong1pizeroDown",
             "CMS_scale_t_3prongUp",
-            "CMS_scale_t_3prongDown"
+            "CMS_scale_t_3prongDown",
+            "CMS_scale_t_3prong1pizeroUp",
+            "CMS_scale_t_3prong1pizeroDown"
             ]        
         self.eventDictionaryModifications = {
             "CMS_scale_t_1prongUp":self.CreateOneProngUpModifiedDictionary,
@@ -22,7 +24,9 @@ class TESUncertainty(Uncertainty):
             "CMS_scale_t_1prong1pizeroUp":self.CreateOneProngOnePizeroUpModifiedDictionary,
             "CMS_scale_t_1prong1pizeroDown":self.CreateOneProngOnePizeroDownModifiedDictionary,
             "CMS_scale_t_3prongUp":self.CreateThreeProngUpModifiedDictionary,
-            "CMS_scale_t_3prongDown":self.CreateThreeProngDownModifiedDictionary
+            "CMS_scale_t_3prongDown":self.CreateThreeProngDownModifiedDictionary,
+            "CMS_scale_t_3prong1pizeroUp":self.CreateThreeProngOnePizeroUpModifiedDictionary,
+            "CMS_scale_t_3prong1pizeroDown":self.CreateThreeProngOnePizeroDownModifiedDictionary
         }
     def CreateOneProngUpModifiedDictionary(self,theTree,nominalEventDictionary):
         tauVectorUp = ROOT.TLorentzVector()
@@ -159,6 +163,58 @@ class TESUncertainty(Uncertainty):
         metVectorDown = ROOT.TLorentzVector()
         new_msv = 0.0
         if(theTree.l2_decayMode == 10):
+            tauVectorDown.SetPtEtaPhiE(theTree.TES_Pt_DOWN,theTree.eta_2,theTree.phi_2,theTree.TES_E_DOWN)
+            metVectorDown.SetPtEtaPhiM(theTree.TES_MET_DOWN,0.0,theTree.TES_METPhi_DOWN,0.0)
+            new_msv = theTree.m_sv_DOWN
+        else:
+            tauVectorDown.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
+            metVectorDown.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
+            new_msv = theTree.m_sv
+
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.basicQuantities["TauPt"] = tauVectorDown.Pt()
+        modifiedEventDictionary.basicQuantities["TauM"] = tauVectorDown.M()
+        modifiedEventDictionary.basicQuantities["TauE"] = tauVectorDown.E()
+        modifiedEventDictionary.basicQuantities["MET"] = metVectorDown.Pt()
+        modifiedEventDictionary.basicQuantities["METPhi"] = metVectorDown.Phi()
+        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+
+        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+        modifiedEventDictionary.CompileCompleteDictionary()
+        
+        return modifiedEventDictionary
+
+    def CreateThreeProngOnePizeroUpModifiedDictionary(self,theTree,nominalEventDictionary):
+        tauVectorUp = ROOT.TLorentzVector()
+        metVectorUp = ROOT.TLorentzVector()
+        new_msv = 0.0
+        if(theTree.l2_decayMode == 11):
+            tauVectorUp.SetPtEtaPhiE(theTree.TES_Pt_UP,theTree.eta_2,theTree.phi_2,theTree.TES_E_UP)
+            metVectorUp.SetPtEtaPhiM(theTree.TES_MET_UP,0.0,theTree.TES_METPhi_UP,0.0)
+            new_msv = theTree.m_sv_UP
+        else:
+            tauVectorUp.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
+            metVectorUp.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
+            new_msv = theTree.m_sv
+
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.basicQuantities["TauPt"] = tauVectorUp.Pt()
+        modifiedEventDictionary.basicQuantities["TauM"] = tauVectorUp.M()
+        modifiedEventDictionary.basicQuantities["TauE"] = tauVectorUp.E()
+        modifiedEventDictionary.basicQuantities["MET"] = metVectorUp.Pt()
+        modifiedEventDictionary.basicQuantities["METPhi"] = metVectorUp.Phi()
+        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+
+        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+        modifiedEventDictionary.CompileCompleteDictionary()
+        
+        return modifiedEventDictionary
+
+    def CreateThreeProngOnePizeroDownModifiedDictionary(self,theTree,nominalEventDictionary):
+        tauVectorDown = ROOT.TLorentzVector()
+        metVectorDown = ROOT.TLorentzVector()
+        new_msv = 0.0
+        if(theTree.l2_decayMode == 11):
             tauVectorDown.SetPtEtaPhiE(theTree.TES_Pt_DOWN,theTree.eta_2,theTree.phi_2,theTree.TES_E_DOWN)
             metVectorDown.SetPtEtaPhiM(theTree.TES_MET_DOWN,0.0,theTree.TES_METPhi_DOWN,0.0)
             new_msv = theTree.m_sv_DOWN
