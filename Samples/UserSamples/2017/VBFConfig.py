@@ -1,7 +1,9 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES import JESUncertainty
+from Samples.Uncertainties.UserUncertainties.JES_17 import JES17Uncertainty
+from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
+from Samples.Uncertainties.UserUncertainties.qqHTheory import qqHTheoryUncertainty
 from Samples.Uncertainties.UserUncertainties.MetRecoil import MetRecoilUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
@@ -17,7 +19,9 @@ VBFSample.files = ['VBF.root']
 VBFSample.definition = ''
 VBFSample.uncertainties = [
     TESUncertainty(),
-    JESUncertainty(),
+    JES17Uncertainty(),
+    JERUncertainty(),
+    qqHTheoryUncertainty(),
     MetRecoilUncertainty(),
     MuonESUncertainty(),
     PrefiringUncertainty(),

@@ -1,7 +1,9 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES import JESUncertainty
+from Samples.Uncertainties.UserUncertainties.JES_16 import JES16Uncertainty
+from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
+from Samples.Uncertainties.UserUncertainties.qqHTheory import qqHTheoryUncertainty
 from Samples.Uncertainties.UserUncertainties.MetRecoil import MetRecoilUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
@@ -14,15 +16,17 @@ VBFSample = Sample()
 VBFSample.name = 'qqH_0J_htt125'
 VBFSample.path = '/data/aloeliger/SMHTT_Selected_2016_Deep/'
 VBFSample.files = ['VBF.root']
-VBFSample.definition = 'Rivet_stage1p1_cat == 201'
+VBFSample.definition = 'Rivet_stage1_1_cat_pTjet30GeV == 201'
 VBFSample.uncertainties = [
     TESUncertainty(),
-    JESUncertainty(),
+    JES16Uncertainty(),
+    JERUncertainty(),
+    qqHTheoryUncertainty(),
     MetRecoilUncertainty(),
     MuonESUncertainty(),
     PrefiringUncertainty(),
     TauIDUncertainty(),
-    Trigger16Uncertainty(),
+    Trigger16Uncertainty(),    
 ]
 VBFSample.eventDictionaryInstance = MuTauEventDictionary
 VBFSample.CreateEventWeight = VBFSample.CreateEventWeight_Standard

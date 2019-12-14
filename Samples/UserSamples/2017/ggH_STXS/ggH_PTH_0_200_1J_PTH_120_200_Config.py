@@ -1,7 +1,8 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES import JESUncertainty
+from Samples.Uncertainties.UserUncertainties.JES_17 import JES17Uncertainty
+from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
 from Samples.Uncertainties.UserUncertainties.ggHTheory import ggHTheoryUncertainty
 from Samples.Uncertainties.UserUncertainties.MetRecoil import MetRecoilUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
@@ -15,10 +16,11 @@ ggHSample = Sample()
 ggHSample.name = 'ggH_PTH_0_200_1J_PTH_120_200_htt125'
 ggHSample.path = '/data/aloeliger/SMHTT_Selected_2017_Deep/'
 ggHSample.files = ['ggH.root']
-ggHSample.definition = 'Rivet_stage1p1_cat == 113'
+ggHSample.definition = 'Rivet_stage1_1_cat_pTjet30GeV == 106'
 ggHSample.uncertainties = [
     TESUncertainty(),
-    JESUncertainty(),
+    JES17Uncertainty(),
+    JERUncertainty(),
     ggHTheoryUncertainty(),
     MetRecoilUncertainty(),
     MuonESUncertainty(),

@@ -1,7 +1,8 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES import JESUncertainty
+from Samples.Uncertainties.UserUncertainties.JES_16 import JES16Uncertainty
+from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
 from Samples.Uncertainties.UserUncertainties.TauID import TauIDUncertainty
@@ -12,11 +13,13 @@ from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import M
 ZHSample = Sample()
 ZHSample.name = 'ZH_htt125'
 ZHSample.path = '/data/aloeliger/SMHTT_Selected_2016_Deep/'
-ZHSample.files = ['ZH.root','GGZHLLTT.root','GGZHNNTT.root']
+ZHSample.files = ['ZH.root','GGZHLLTT.root']
+#ZHSample.files = ['ZH.root','GGZHLLTT.root','GGZHNNTT.root']
 ZHSample.definition = ''
 ZHSample.uncertainties = [
     TESUncertainty(),
-    JESUncertainty(),
+    JES16Uncertainty(),
+    JERUncertainty(),
     MuonESUncertainty(),
     PrefiringUncertainty(),
     TauIDUncertainty(),

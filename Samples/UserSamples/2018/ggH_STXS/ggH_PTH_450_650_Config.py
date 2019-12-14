@@ -1,7 +1,8 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES import JESUncertainty
+from Samples.Uncertainties.UserUncertainties.JES_18 import JES18Uncertainty
+from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
 from Samples.Uncertainties.UserUncertainties.ggHTheory import ggHTheoryUncertainty
 from Samples.Uncertainties.UserUncertainties.MetRecoil import MetRecoilUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
@@ -11,13 +12,14 @@ from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Unce
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
 ggHSample = Sample()
-ggHSample.name = 'ggH_PTH_GE200_htt125'
+ggHSample.name = 'ggH_PTH_450_650_htt125'
 ggHSample.path = '/data/aloeliger/SMHTT_Selected_2018_Deep/'
 ggHSample.files = ['ggH.root']
-ggHSample.definition = 'Rivet_stage1p1_cat == 150'
+ggHSample.definition = 'Rivet_stage1_1_cat_pTjet30GeV == 101 && Rivet_higgsPt > 450 && Rivet_higgsPt < 650'
 ggHSample.uncertainties = [
     TESUncertainty(),
-    JESUncertainty(),
+    JES18Uncertainty(),
+    JERUncertainty(),
     ggHTheoryUncertainty(),
     MetRecoilUncertainty(),
     MuonESUncertainty(),

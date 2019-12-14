@@ -1,7 +1,8 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES import JESUncertainty
+from Samples.Uncertainties.UserUncertainties.JES_17 import JES17Uncertainty
+from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
 from Samples.Uncertainties.UserUncertainties.METUES import METUESUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
@@ -20,7 +21,8 @@ STSample.files = ['ST_t_top.root',
 STSample.definition = '(gen_match_1 == 1 || gen_match_1 == 2) && gen_match_2 == 5'
 STSample.uncertainties = [
     TESUncertainty(),
-    JESUncertainty(),
+    JES17Uncertainty(),
+    JERUncertainty(),
     METUESUncertainty(),
     MuonESUncertainty(),
     PrefiringUncertainty(),

@@ -1,10 +1,12 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES import JESUncertainty
+from Samples.Uncertainties.UserUncertainties.JES_18 import JES18Uncertainty
+from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
 from Samples.Uncertainties.UserUncertainties.METUES import METUESUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.TTbarShape import TTbarShape
+from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Uncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -15,10 +17,12 @@ TTLSample.files = ['TTTo2L2Nu.root','TTToHadronic.root','TTToSemiLeptonic.root']
 TTLSample.definition = 'gen_match_2 < 5'
 TTLSample.uncertainties = [
     TESUncertainty(),
-    JESUncertainty(),
+    JES18Uncertainty(),
+    JERUncertainty(),
     METUESUncertainty(),
     MuonESUncertainty(),
     TTbarShape(),
+    Trigger1718Uncertainty(),
 ]
 TTLSample.eventDictionaryInstance = MuTauEventDictionary
 TTLSample.CreateEventWeight = TTLSample.CreateEventWeight_Standard

@@ -3,7 +3,8 @@ from Samples.SampleDefinition import Sample
 # Uncertainties 
 from Samples.Uncertainties.UserUncertainties.EmbeddedTES import EmbeddedTESUncertainty
 from Samples.Uncertainties.UserUncertainties.TTbarContamination import TTbarContaminationUncertainty
-from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Uncertainty
+from Samples.Uncertainties.UserUncertainties.EmbeddedTrigger17_18 import EmbeddedTrigger1718Uncertainty
+from Samples.Uncertainties.UserUncertainties.EmbeddedMuonES import EmbeddedMuonESUncertainty
 
 # event definition
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
@@ -29,7 +30,8 @@ EmbeddedSample.definition = ''
 EmbeddedSample.uncertainties = [
     EmbeddedTESUncertainty(),
     TTbarContaminationUncertainty(),
-    Trigger1718Uncertainty(),
+    EmbeddedTrigger1718Uncertainty(),
+    EmbeddedMuonESUncertainty(),
     ]
 EmbeddedSample.eventDictionaryInstance = MuTauEventDictionary
 EmbeddedSample.CreateEventWeight = EmbeddedSample.CreateEventWeight_Standard

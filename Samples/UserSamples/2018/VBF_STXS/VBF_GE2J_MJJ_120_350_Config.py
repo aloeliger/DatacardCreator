@@ -1,7 +1,9 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES import JESUncertainty
+from Samples.Uncertainties.UserUncertainties.JES_18 import JES18Uncertainty
+from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
+from Samples.Uncertainties.UserUncertainties.qqHTheory import qqHTheoryUncertainty
 from Samples.Uncertainties.UserUncertainties.MetRecoil import MetRecoilUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.TauID import TauIDUncertainty
@@ -13,10 +15,12 @@ VBFSample = Sample()
 VBFSample.name = 'qqH_GE2J_MJJ_120_350_htt125'
 VBFSample.path = '/data/aloeliger/SMHTT_Selected_2018_Deep/'
 VBFSample.files = ['VBF.root']
-VBFSample.definition = 'Rivet_stage1p1_cat == 213'
+VBFSample.definition = 'Rivet_stage1_1_cat_pTjet30GeV == 205'
 VBFSample.uncertainties = [
     TESUncertainty(),
-    JESUncertainty(),
+    JES18Uncertainty(),
+    JERUncertainty(),
+    qqHTheoryUncertainty(),
     MetRecoilUncertainty(),
     MuonESUncertainty(),
     TauIDUncertainty(),

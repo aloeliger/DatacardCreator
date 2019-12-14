@@ -1,7 +1,8 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES import JESUncertainty
+from Samples.Uncertainties.UserUncertainties.JES_17 import JES17Uncertainty
+from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
 from Samples.Uncertainties.UserUncertainties.ggHTheory import ggHTheoryUncertainty
 from Samples.Uncertainties.UserUncertainties.MetRecoil import MetRecoilUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
@@ -18,7 +19,8 @@ ggHSample.files = ['ggH.root']
 ggHSample.definition = ''
 ggHSample.uncertainties = [
     TESUncertainty(),
-    JESUncertainty(),
+    JES17Uncertainty(),
+    JERUncertainty(),
     ggHTheoryUncertainty(),
     MetRecoilUncertainty(),
     MuonESUncertainty(),
