@@ -43,11 +43,13 @@ def FillMuTauConstructedQuantities(theEventDictionary,theBasicQuantities):
     HiggsPt = (tauVector+muVector+METVector).Pt()
     MT = math.sqrt(2.0*muVector.Pt()*METVector.Pt()*(1.0-math.cos(muVector.DeltaPhi(METVector))))
     Higgs_jjPt = (tauVector+muVector+METVector+jetOneVector+jetTwoVector).Pt()
+    DeltaR = tauVector.DeltaR(muVector)
     theEventDictionary.constructedQuantities = {
         "MT": MT,
         "MVis": MVis,
         "HiggsPt": HiggsPt,
-        "Higgs_jjPt": Higgs_jjPt
+        "Higgs_jjPt": Higgs_jjPt,
+        "DeltaR":DeltaR
     }
 
 MuTauEventDictionary = EventDictionary()
