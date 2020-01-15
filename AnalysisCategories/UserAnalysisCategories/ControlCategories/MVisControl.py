@@ -9,7 +9,7 @@ def IsInInclusiveCategory(theAnalysisCategory,theEventDictionary):
     return isGoodEvent
 
 MTInclusive = AnalysisCategoryDef.AnalysisCategory()
-MTInclusive.name = "Inclusive"
+MTInclusive.name = "mvis"
 MTInclusive.IsInCategory = IsInInclusiveCategory
 MTInclusive.rollingVariable = "TauPt"
 MTInclusive.rollingBins = [0.0,9000.0]
