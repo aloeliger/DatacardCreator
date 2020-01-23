@@ -19,13 +19,19 @@ class FakeFactorUncertainty(Uncertainty):
             "CMS_rawFF_mt_w_2jet_unc2Up",
             "CMS_rawFF_mt_tt_unc1Up",
             "CMS_rawFF_mt_tt_unc2Up",
-            "CMS_FF_closure_mvis_mt_qcd_0jetUp",
-            "CMS_FF_closure_mvis_mt_qcd_1jetUp",
-            "CMS_FF_closure_mvis_mt_qcd_2jetUp",
-            "CMS_FF_closure_mvis_mt_w_0jetUp",            
-            "CMS_FF_closure_mvis_mt_w_1jetUp",
-            "CMS_FF_closure_mvis_mt_w_2jetUp",
-            "CMS_FF_closure_mvis_mt_ttUp",            
+            #"CMS_FF_closure_mvis_mt_qcd_0jetUp",
+            #"CMS_FF_closure_mvis_mt_qcd_1jetUp",
+            #"CMS_FF_closure_mvis_mt_qcd_2jetUp",
+            #"CMS_FF_closure_mvis_mt_w_0jetUp",            
+            #"CMS_FF_closure_mvis_mt_w_1jetUp",
+            #"CMS_FF_closure_mvis_mt_w_2jetUp",
+            #"CMS_FF_closure_mvis_mt_ttUp",            
+            "CMS_FF_closure_lpt_xtrg_mt_qcdUp",
+	    "CMS_FF_closure_lpt_xtrg_mt_wUp",
+	    "CMS_FF_closure_lpt_xtrg_mt_ttUp",
+	    "CMS_FF_closure_lpt_mt_qcdUp",
+	    "CMS_FF_closure_lpt_mt_wUp",
+	    "CMS_FF_closure_lpt_mt_ttUp",
             "CMS_FF_closure_OSSS_mvis_mt_qcdUp",            
             "CMS_FF_closure_mt_mt_w_unc1Up",
             "CMS_FF_closure_mt_mt_w_unc2Up",
@@ -43,13 +49,19 @@ class FakeFactorUncertainty(Uncertainty):
             "CMS_rawFF_mt_w_2jet_unc2Down",
             "CMS_rawFF_mt_tt_unc1Down",
             "CMS_rawFF_mt_tt_unc2Down",
-            "CMS_FF_closure_mvis_mt_qcd_0jetDown",
-            "CMS_FF_closure_mvis_mt_qcd_1jetDown",
-            "CMS_FF_closure_mvis_mt_qcd_2jetDown",
-            "CMS_FF_closure_mvis_mt_w_0jetDown",            
-            "CMS_FF_closure_mvis_mt_w_1jetDown",
-            "CMS_FF_closure_mvis_mt_w_2jetDown",
-            "CMS_FF_closure_mvis_mt_ttDown",            
+            #"CMS_FF_closure_mvis_mt_qcd_0jetDown",
+            #"CMS_FF_closure_mvis_mt_qcd_1jetDown",
+            #"CMS_FF_closure_mvis_mt_qcd_2jetDown",
+            #"CMS_FF_closure_mvis_mt_w_0jetDown",            
+            #"CMS_FF_closure_mvis_mt_w_1jetDown",
+            #"CMS_FF_closure_mvis_mt_w_2jetDown",
+            #"CMS_FF_closure_mvis_mt_ttDown",            
+            "CMS_FF_closure_lpt_xtrg_mt_qcdDown",
+	    "CMS_FF_closure_lpt_xtrg_mt_wDown",
+	    "CMS_FF_closure_lpt_xtrg_mt_ttDown",
+	    "CMS_FF_closure_lpt_mt_qcdDown",
+	    "CMS_FF_closure_lpt_mt_wDown",
+	    "CMS_FF_closure_lpt_mt_ttDown",
             "CMS_FF_closure_OSSS_mvis_mt_qcdDown",            
             "CMS_FF_closure_mt_mt_w_unc1Down",
             "CMS_FF_closure_mt_mt_w_unc2Down",
@@ -69,14 +81,20 @@ class FakeFactorUncertainty(Uncertainty):
             "CMS_rawFF_mt_w_2jet_unc2Up":self.CreateRawW2JetUnc2UpDictionary,
             "CMS_rawFF_mt_tt_unc1Up":self.CreateRawTT0JetUnc1UpDictionary,
             "CMS_rawFF_mt_tt_unc2Up":self.CreateRawTT0JetUnc2UpDictionary,
-            "CMS_FF_closure_mvis_mt_qcd_0jetUp":self.CreateMvisClosureQCD0JetUpDictionary,
-            "CMS_FF_closure_mvis_mt_qcd_1jetUp":self.CreateMvisClosureQCD1JetUpDictionary,
-            "CMS_FF_closure_mvis_mt_qcd_2jetUp":self.CreateMvisClosureQCD2JetUpDictionary,
-            "CMS_FF_closure_mvis_mt_w_0jetUp":self.CreateMvisClosureW0JetUpDictionary,            
-            "CMS_FF_closure_mvis_mt_w_1jetUp":self.CreateMvisClosureW1JetUpDictionary,
-            "CMS_FF_closure_mvis_mt_w_2jetUp":self.CreateMvisClosureW2JetUpDictionary,
-            "CMS_FF_closure_mvis_mt_ttUp":self.CreateMvisClosureTTUpDictionary,
-            "CMS_FF_closure_OSSS_mvis_mt_qcdUp":self.CreateOSSSClosureQCDUnc1UpDictionary,            
+            #"CMS_FF_closure_mvis_mt_qcd_0jetUp":self.CreateMvisClosureQCD0JetUpDictionary,
+            #"CMS_FF_closure_mvis_mt_qcd_1jetUp":self.CreateMvisClosureQCD1JetUpDictionary,
+            #"CMS_FF_closure_mvis_mt_qcd_2jetUp":self.CreateMvisClosureQCD2JetUpDictionary,
+            #"CMS_FF_closure_mvis_mt_w_0jetUp":self.CreateMvisClosureW0JetUpDictionary,            
+            #"CMS_FF_closure_mvis_mt_w_1jetUp":self.CreateMvisClosureW1JetUpDictionary,
+            #"CMS_FF_closure_mvis_mt_w_2jetUp":self.CreateMvisClosureW2JetUpDictionary,
+            #"CMS_FF_closure_mvis_mt_ttUp":self.CreateMvisClosureTTUpDictionary,
+            "CMS_FF_closure_lpt_xtrg_mt_qcdUp":self.CreateLPTClosureXTrgQCDUpDictionary,
+	    "CMS_FF_closure_lpt_xtrg_mt_wUp":self.CreateLPTClosureXTrgWUpDictionary,
+	    "CMS_FF_closure_lpt_xtrg_mt_ttUp":self.CreateLPTClosureXTrgTTUpDictionary,
+	    "CMS_FF_closure_lpt_mt_qcdUp":self.CreateLPTClosureQCDUpDictionary,
+	    "CMS_FF_closure_lpt_mt_wUp":self.CreateLPTClosureWUpDictionary,
+	    "CMS_FF_closure_lpt_mt_ttUp":self.CreateLPTClosureTTUpDictionary,
+            "CMS_FF_closure_OSSS_mvis_mt_qcdUp":self.CreateOSSSClosureQCDUnc1UpDictionary,
             "CMS_FF_closure_mt_mt_w_unc1Up":self.CreateMTClosureWUnc1UpDictionary,
             "CMS_FF_closure_mt_mt_w_unc2Up":self.CreateMTClosureWUnc2UpDictionary,
             "CMS_rawFF_mt_qcd_0jet_unc1Down":self.CreateRawQCD0JetUnc1DownDictionary,
@@ -93,13 +111,19 @@ class FakeFactorUncertainty(Uncertainty):
             "CMS_rawFF_mt_w_2jet_unc2Down":self.CreateRawW2JetUnc2DownDictionary,
             "CMS_rawFF_mt_tt_unc1Down":self.CreateRawTT0JetUnc1DownDictionary,
             "CMS_rawFF_mt_tt_unc2Down":self.CreateRawTT0JetUnc2DownDictionary,
-            "CMS_FF_closure_mvis_mt_qcd_0jetDown":self.CreateMvisClosureQCD0JetDownDictionary,
-            "CMS_FF_closure_mvis_mt_qcd_1jetDown":self.CreateMvisClosureQCD1JetDownDictionary,
-            "CMS_FF_closure_mvis_mt_qcd_2jetDown":self.CreateMvisClosureQCD2JetDownDictionary,
-            "CMS_FF_closure_mvis_mt_w_0jetDown":self.CreateMvisClosureW0JetDownDictionary,            
-            "CMS_FF_closure_mvis_mt_w_1jetDown":self.CreateMvisClosureW1JetDownDictionary,
-            "CMS_FF_closure_mvis_mt_w_2jetDown":self.CreateMvisClosureW2JetDownDictionary,
-            "CMS_FF_closure_mvis_mt_ttDown":self.CreateMvisClosureTTDownDictionary,
+            #"CMS_FF_closure_mvis_mt_qcd_0jetDown":self.CreateMvisClosureQCD0JetDownDictionary,
+            #"CMS_FF_closure_mvis_mt_qcd_1jetDown":self.CreateMvisClosureQCD1JetDownDictionary,
+            #"CMS_FF_closure_mvis_mt_qcd_2jetDown":self.CreateMvisClosureQCD2JetDownDictionary,
+            #"CMS_FF_closure_mvis_mt_w_0jetDown":self.CreateMvisClosureW0JetDownDictionary,            
+            #"CMS_FF_closure_mvis_mt_w_1jetDown":self.CreateMvisClosureW1JetDownDictionary,
+            #"CMS_FF_closure_mvis_mt_w_2jetDown":self.CreateMvisClosureW2JetDownDictionary,
+            #"CMS_FF_closure_mvis_mt_ttDown":self.CreateMvisClosureTTDownDictionary,
+            "CMS_FF_closure_lpt_xtrg_mt_qcdDown":self.CreateLPTClosureXTrgQCDDownDictionary,
+	    "CMS_FF_closure_lpt_xtrg_mt_wDown":self.CreateLPTClosureXTrgWDownDictionary,
+	    "CMS_FF_closure_lpt_xtrg_mt_ttDown":self.CreateLPTClosureXTrgTTDownDictionary,
+	    "CMS_FF_closure_lpt_mt_qcdDown":self.CreateLPTClosureQCDDownDictionary,
+	    "CMS_FF_closure_lpt_mt_wDown":self.CreateLPTClosureWDownDictionary,
+	    "CMS_FF_closure_lpt_mt_ttDown":self.CreateLPTClosureTTDownDictionary,
             "CMS_FF_closure_OSSS_mvis_mt_qcdDown":self.CreateOSSSClosureQCDUnc1DownDictionary,            
             "CMS_FF_closure_mt_mt_w_unc1Down":self.CreateMTClosureWUnc1DownDictionary,
             "CMS_FF_closure_mt_mt_w_unc2Down":self.CreateMTClosureWUnc2DownDictionary
@@ -220,7 +244,7 @@ class FakeFactorUncertainty(Uncertainty):
         modifiedEventDictionary = nominalEventDictionary.Clone()
         modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.ff_tt_0jet_unc2_down
         return modifiedEventDictionary
-        
+        """
         #QCD mvis closure
     def CreateMvisClosureQCD0JetUpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
@@ -282,8 +306,60 @@ class FakeFactorUncertainty(Uncertainty):
         modifiedEventDictionary = nominalEventDictionary.Clone()
         modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.mvisclosure_tt_down
         return modifiedEventDictionary    
+        """
+    #cross trigger lpt
+    def CreateLPTClosureXTrgQCDUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_xtrg_qcd_0jet_up
+        return modifiedEventDictionary
+    def CreateLPTClosureXTrgQCDDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_xtrg_qcd_0jet_down
+        return modifiedEventDictionary
+    def CreateLPTClosureXTrgWUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_xtrg_w_0jet_up
+        return modifiedEventDictionary
+    def CreateLPTClosureXTrgWDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_xtrg_w_0jet_down
+        return modifiedEventDictionary
+    def CreateLPTClosureXTrgTTUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_xtrg_tt_up
+        return modifiedEventDictionary
+    def CreateLPTClosureXTrgTTDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_xtrg_tt_down
+        return modifiedEventDictionary
+
+    #iso trigger lpt
+    def CreateLPTClosureQCDUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_qcd_0jet_up
+        return modifiedEventDictionary
+    def CreateLPTClosureQCDDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_qcd_0jet_down
+        return modifiedEventDictionary
+    def CreateLPTClosureWUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_w_0jet_up
+        return modifiedEventDictionary
+    def CreateLPTClosureWDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_w_0jet_down
+        return modifiedEventDictionary
+    def CreateLPTClosureTTUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_tt_up
+        return modifiedEventDictionary
+    def CreateLPTClosureTTDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.lptclosure_tt_down
+        return modifiedEventDictionary
         
-        #W mt closure
+    #W mt closure
     def CreateMTClosureWUnc1UpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
         modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.mtclosure_w_unc1_up
