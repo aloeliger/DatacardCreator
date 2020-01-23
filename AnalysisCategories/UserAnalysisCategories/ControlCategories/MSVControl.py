@@ -9,11 +9,11 @@ def IsInInclusiveCategory(theAnalysisCategory,theEventDictionary):
     return isGoodEvent
 
 MTInclusive = AnalysisCategoryDef.AnalysisCategory()
-MTInclusive.name = "mvis"
+MTInclusive.name = "mtt"
 MTInclusive.IsInCategory = IsInInclusiveCategory
 MTInclusive.rollingVariable = "TauPt"
 MTInclusive.rollingBins = [0.0,9000.0]
-MTInclusive.reconstructionVariable = "MVis"
-MTInclusive.reconstructionBins = [50.0,55.0,60.0,65.0,70.0,75.0,80.0,85.0,90.0,95.0,100.0,
-                                  105.0,110.0,115.0,120.0,125.0,130.0,135.0,140.0,145.0,150.0,
-                                  155.0,160.0,165.0,170.0,175.0,180.0,185.0,190.0,195.0,200.0]
+MTInclusive.reconstructionVariable = "M_sv"
+MTInclusive.reconstructionBins = [0.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0,
+                                  110.0,120.0,130.0,140.0,150.0,160.0,170.0,180.0,190.0,200.0,
+                                  210.0,220.0,230.0,240.0,250.0,260.0,270.0,280.0,290.0,300.0,]
