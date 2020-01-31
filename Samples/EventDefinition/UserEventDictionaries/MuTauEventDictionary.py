@@ -29,6 +29,12 @@ def FillMuTauBasicQuantities(theEventDictionary,theTree):
         "Njets": theTree.njets,
         "mjj": theTree.mjj,
         "M_sv": theTree.m_sv,
+        "LJetPt": jetOneVector.Pt(),
+        "LJetPhi": jetOneVector.Phi(),
+        "LJetEta": jetOneVector.Eta(),
+        "SLJetPt": jetTwoVector.Pt(),
+        "SLJetPhi": jetTwoVector.Phi(),
+        "SLJetEta": jetTwoVector.Eta(),        
     }
 def FillMuTauConstructedQuantities(theEventDictionary,theBasicQuantities):
     tauVector = ROOT.TLorentzVector()
@@ -39,17 +45,26 @@ def FillMuTauConstructedQuantities(theEventDictionary,theBasicQuantities):
     tauVector.SetPtEtaPhiM(theBasicQuantities["TauPt"],theBasicQuantities["TauEta"],theBasicQuantities["TauPhi"],theBasicQuantities["TauM"])
     muVector.SetPtEtaPhiM(theBasicQuantities["MuPt"],theBasicQuantities["MuEta"],theBasicQuantities["MuPhi"],theBasicQuantities["MuM"])
     METVector.SetPtEtaPhiM(theBasicQuantities["MET"],0.0,theBasicQuantities["METPhi"],0.0)    
+    jetOneVector.SetPtEtaPhiM(theBasicQuantities["LJetPt"],
+                              theBasicQuantities["LJetPhi"],
+                              theBasicQuantities["LJetEta"],
+                              0.0)
+    jetTwoVector.SetPtEtaPhiM(theBasicQuantities["SLJetPt"],
+                              theBasicQuantities["SLJetPhi"],
+                              theBasicQuantities["SLJetEta"],
+                              0.0)
     MVis = (tauVector+muVector).M()
     HiggsPt = (tauVector+muVector+METVector).Pt()
     MT = math.sqrt(2.0*muVector.Pt()*METVector.Pt()*(1.0-math.cos(muVector.DeltaPhi(METVector))))
     Higgs_jjPt = (tauVector+muVector+METVector+jetOneVector+jetTwoVector).Pt()
-    DeltaR = tauVector.DeltaR(muVector)
+    DeltaR = tauVector.DeltaR(muVector)    
     theEventDictionary.constructedQuantities = {
         "MT": MT,
         "MVis": MVis,
         "HiggsPt": HiggsPt,
         "Higgs_jjPt": Higgs_jjPt,
-        "DeltaR":DeltaR
+        "DeltaR":DeltaR,
+        "DEtaJJ": (abs(jetOneVector.Eta()-jetTwoVector.Eta())),
     }
 
 MuTauEventDictionary = EventDictionary()
