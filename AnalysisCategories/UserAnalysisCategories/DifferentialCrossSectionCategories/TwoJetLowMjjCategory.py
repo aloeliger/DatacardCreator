@@ -6,7 +6,7 @@ def IsInTwoJetLowCategory(theAnalysisCategory,theEventDictionary):
             theEventDictionary.eventDictionary['TauPt'] >= 30.0
             and theEventDictionary.eventDictionary['MT'] < 50.0
             and theEventDictionary.eventDictionary['Njets'] == 2
-            and theEventDictionary.eventDictioanry['mjj'] < 450.0
+            and theEventDictionary.eventDictionary['mjj'] < 450.0
             ):
         return True
     else:

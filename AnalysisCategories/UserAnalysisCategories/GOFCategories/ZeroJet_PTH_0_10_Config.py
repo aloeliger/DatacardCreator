@@ -20,4 +20,4 @@ ZeroJetLow.IsInCategory = IsInZeroJetLowCategory
 ZeroJetLow.rollingVariable  = 'TauPt'
 ZeroJetLow.rollingBins = [30.0,40.0,50.0,10000.0]
 ZeroJetLow.reconstructionVariable='M_sv'
-ZeroJetLow.reconstructionBins=[50.0,70.0,90.0,110.0,130.0,150.0,170.0,210.0,250.0,9000.0]
+ZeroJetLow.reconstructionBins=[50.0,70.0,90.0,110.0,130.0,150.0,170.0,210.0,250.0,290.0]

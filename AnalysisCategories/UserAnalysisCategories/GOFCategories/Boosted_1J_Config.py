@@ -18,7 +18,7 @@ Boosted1J = AnalysisCategoryDef.AnalysisCategory()
 Boosted1J.name = 'mt_boosted_1J'
 Boosted1J.IsInCategory = IsInBoostedOneJetCategory
 Boosted1J.rollingVariable = 'HiggsPt'
-Boosted1J.rollingBins = [0.0,60.0,120.0,200.0,250.0,300.0,10000.0]
+Boosted1J.rollingBins = [0.0,60.0,120.0,200.0,250.0,10000.0]
 Boosted1J.reconstructionVariable = 'M_sv'
-Boosted1J.reconstructionBins = [50.0,70.0,90.0,110.0,130.0,150.0,170.0,210.0,250.0,9000.0]
+Boosted1J.reconstructionBins = [50.0,70.0,90.0,110.0,130.0,150.0,170.0,210.0,250.0,290.0]
 

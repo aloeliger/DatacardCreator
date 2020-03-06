@@ -13,7 +13,7 @@ def IsInTwoJetLowCategory(theAnalysisCategory,theEventDictionary):
     return False
 
 TwoJetLow = AnalysisCategoryDef.AnalysisCategory()
-TwoJetLow.name = "mt_2jet_mjjrolled"
+TwoJetLow.name = "mt_2jet"
 TwoJetLow.IsInCategory = IsInTwoJetLowCategory
 TwoJetLow.rollingVariable = 'mjj'
 TwoJetLow.rollingBins = [0,150,300,450,600,1000,1400,1800,10000]
