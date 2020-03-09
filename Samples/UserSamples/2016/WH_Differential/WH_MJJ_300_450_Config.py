@@ -11,7 +11,7 @@ from Samples.Uncertainties.UserUncertainties.Trigger16 import Trigger16Uncertain
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
 WHSample = Sample()
-WHSample.name = "WH_PTH_300_450_htt125"
+WHSample.name = "WH_MJJ_300_450_htt125"
 WHSample.path = '/data/aloeliger/SMHTT_Selected_2016_Deep/'
 WHSample.files = ['WHPlus.root','WHMinus.root']
 WHSample.definition = 'is_Fiducial == 1.0 && Rivet_mjj >= 300 && Rivet_mjj < 450'

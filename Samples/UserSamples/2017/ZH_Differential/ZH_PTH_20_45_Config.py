@@ -14,7 +14,7 @@ ZHSample = Sample()
 ZHSample.name = 'ZH_PTH_20_45_htt125'
 ZHSample.path = '/data/aloeliger/SMHTT_Selected_2017_Deep/'
 ZHSample.files = ['ZH.root','GGZHLLTT.root','GGZHNNTT.root','GGZHQQTT.root']
-ZHSample.definition = 'is_Fiducial = 1.0 && Rivet_higgsPt > 20.0 && Rivet_higgsPt < 45.0'
+ZHSample.definition = 'is_Fiducial == 1.0 && Rivet_higgsPt > 20.0 && Rivet_higgsPt < 45.0'
 ZHSample.uncertainties = [
     TESUncertainty(),
     JES17Uncertainty(),

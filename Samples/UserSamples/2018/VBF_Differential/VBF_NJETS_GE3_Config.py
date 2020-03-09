@@ -12,7 +12,7 @@ from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Unce
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
 VBFSample = Sample()
-VBFSample.name = 'qqH_NJETS_3_htt125'
+VBFSample.name = 'qqH_NJETS_GE3_htt125'
 VBFSample.path = '/data/aloeliger/SMHTT_Selected_2018_Deep/'
 VBFSample.files = ['VBF.root']
 VBFSample.definition = 'is_Fiducial == 1.0 && Rivet_nJets30 >= 3'

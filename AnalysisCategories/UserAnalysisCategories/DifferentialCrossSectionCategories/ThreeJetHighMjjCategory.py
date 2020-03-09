@@ -14,7 +14,7 @@ def IsInThreeJetHighCategory(theAnalysisCategory,theEventDictionary):
     return False
 
 ThreeJetHigh = AnalysisCategoryDef.AnalysisCategory()
-ThreeJetHigh.name = "mt_3jet_high"
+ThreeJetHigh.name = "mt_3jethigh"
 ThreeJetHigh.IsInCategory = IsInThreeJetHighCategory
 ThreeJetHigh.rollingVariable = 'HiggsPt'
 ThreeJetHigh.rollingBins = [0,20,45,80,120,200,350,10000]

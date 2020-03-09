@@ -11,10 +11,10 @@ from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Unce
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
 ZHSample = Sample()
-ZHSample.name = 'ZH_NJETS_2_htt125'
+ZHSample.name = 'ZH_NJETS_GE3_htt125'
 ZHSample.path = '/data/aloeliger/SMHTT_Selected_2017_Deep/'
 ZHSample.files = ['ZH.root','GGZHLLTT.root','GGZHNNTT.root','GGZHQQTT.root']
-ZHSample.definition = 'is_Fiducial = 1.0 && Rivet_nJets30 == 2'
+ZHSample.definition = 'is_Fiducial == 1.0 && Rivet_nJets30 == 2'
 ZHSample.uncertainties = [
     TESUncertainty(),
     JES17Uncertainty(),
