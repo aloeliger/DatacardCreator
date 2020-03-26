@@ -8,6 +8,7 @@ from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.TTbarShape import TTbarShape
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
 from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Uncertainty
+from Samples.Uncertainties.UserUncertainties.eTauFakeRate import eTauFakeRateUncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -25,6 +26,7 @@ TTLSample.uncertainties = [
     TTbarShape(),
     PrefiringUncertainty(),
     Trigger1718Uncertainty(),
+    eTauFakeRateUncertainty(),
 ]
 TTLSample.eventDictionaryInstance = MuTauEventDictionary
 TTLSample.CreateEventWeight = TTLSample.CreateEventWeight_Standard

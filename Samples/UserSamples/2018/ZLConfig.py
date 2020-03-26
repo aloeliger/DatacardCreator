@@ -8,6 +8,7 @@ from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
 from Samples.Uncertainties.UserUncertainties.MetRecoil import MetRecoilUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Uncertainty
+from Samples.Uncertainties.UserUncertainties.TauFakeRate import TauFakeRateUncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -25,6 +26,7 @@ DYLSample.uncertainties = [
     MuonESUncertainty(),
     ZLShapeUncertainty(),
     Trigger1718Uncertainty(),
+    TauFakeRateUncertainty(),
 ]
 DYLSample.eventDictionaryInstance = MuTauEventDictionary
 DYLSample.CreateEventWeight = DYLSample.CreateEventWeight_Standard

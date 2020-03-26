@@ -18,7 +18,7 @@ STSample.files = ['ST_t_top.root',
                   'ST_t_antitop.root',
                   'ST_tW_top.root',
                   'ST_tW_antitop.root']
-STSample.definition = '(gen_match_1 == 1 || gen_match_1 == 2) && gen_match_2 == 5'
+STSample.definition = 'gen_match_2 == 5'
 STSample.uncertainties = [
     TESUncertainty(),
     JES17Uncertainty(),

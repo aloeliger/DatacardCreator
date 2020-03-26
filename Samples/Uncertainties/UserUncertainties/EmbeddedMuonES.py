@@ -20,10 +20,10 @@ class EmbeddedMuonESUncertainty(Uncertainty):
             "CMS_scale_emb_m_eta2p1to2p4Up":self.CreateMuonEta2p1to2p4UpDictionary,
             "CMS_scale_emb_m_eta2p1to2p4Down":self.CreateMuonEta2p1to2p4DownDictionary,
             }
-    def CreateMuonEtaLt1p2UpDictionary(self,theTree,nominalEventDictionary):
+    def CreateMuonEtaLt1p2UpDictionary(self,theTree,nominalEventDictionary):        
         muVector = ROOT.TLorentzVector()
         metVector = ROOT.TLorentzVector()
-        new_msv = theTree.m_sv
+        new_msv = theTree.m_sv        
         if (abs(theTree.eta_1) < 1.2):
             muVector.SetPtEtaPhiE(theTree.muonES_Pt_UP,theTree.eta_1,theTree.phi_1,theTree.muonES_E_UP)
             metVector.SetPtEtaPhiM(theTree.muonES_MET_UP,0.0,theTree.muonES_METPhi_UP,0.0)
@@ -31,8 +31,7 @@ class EmbeddedMuonESUncertainty(Uncertainty):
         else:
             muVector.SetPtEtaPhiM(theTree.pt_1,theTree.eta_1,theTree.phi_1,theTree.m_1)
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
-            
-        
+
         modifiedEventDictionary = nominalEventDictionary.Clone()
         modifiedEventDictionary.basicQuantities["MuPt"] = muVector.Pt()
         modifiedEventDictionary.basicQuantities["MuM"] = muVector.M()

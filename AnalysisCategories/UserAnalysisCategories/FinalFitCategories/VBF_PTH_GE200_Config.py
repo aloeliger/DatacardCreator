@@ -9,6 +9,9 @@ def IsInVBFHighCategory(theAnalysisCategory,theEventDictionary):
             and theEventDictionary.eventDictionary['MT'] < 50.0
             and theEventDictionary.eventDictionary['HiggsPt'] >= 200.0
     ):
+        #theAnalysisCategory.dumpRLEFile.write(str(theEventDictionary.eventDictionary['run'])+' '
+        #                                      +str(theEventDictionary.eventDictionary['lumi'])+' '
+        #                                      +str(theEventDictionary.eventDictionary['evt'])+'\n')
         return True
     else:
         return False
@@ -21,3 +24,4 @@ VBFHigh.rollingVariable = 'mjj'
 VBFHigh.rollingBins = [350.0,700.0,1200.0,10000.0]
 VBFHigh.reconstructionVariable = 'M_sv'
 VBFHigh.reconstructionBins = [50.0,70.0,90.0,110.0,130.0,150.0,170.0,210.0,250.0,290.0]
+#VBFHigh.dumpRLEFile = open ("VBFHighHPTDumpFile.txt","w")

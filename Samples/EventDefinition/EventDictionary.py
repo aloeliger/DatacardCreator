@@ -40,3 +40,7 @@ class EventDictionary():
         clonedEventDictionary.FillConstructedQuantities = self.FillConstructedQuantities
         clonedEventDictionary.Weight = self.Weight
         return clonedEventDictionary
+    #debugging print function
+    def Print(self):
+        for key in self.eventDictionary:
+            print(key+": "+str(self.eventDictionary[key]))

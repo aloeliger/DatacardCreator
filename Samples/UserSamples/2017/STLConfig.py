@@ -7,6 +7,7 @@ from Samples.Uncertainties.UserUncertainties.METUES import METUESUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
 from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Uncertainty
+from Samples.Uncertainties.UserUncertainties.eTauFakeRate import eTauFakeRateUncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -26,6 +27,7 @@ STSample.uncertainties = [
     MuonESUncertainty(),
     PrefiringUncertainty(),
     Trigger1718Uncertainty(),
+    eTauFakeRateUncertainty(),
 ]
 STSample.eventDictionaryInstance = MuTauEventDictionary
 STSample.CreateEventWeight = STSample.CreateEventWeight_Standard

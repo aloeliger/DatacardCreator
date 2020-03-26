@@ -14,15 +14,15 @@ from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import M
 VVSample = Sample()
 VVSample.name = 'VVT'
 VVSample.path = '/data/aloeliger/SMHTT_Selected_2016_Deep/'
-VVSample.files = [#'WW1L1Nu2Q.root',
-                  #'WZ1L1Nu2Q.root',
-                  #'WZ1L3Nu.root',
+VVSample.files = ['WW1L1Nu2Q.root',
+                  'WZ1L1Nu2Q.root',
+                  'WZ1L3Nu.root',
                   'WZ3L1Nu.root',
                   'WZ2L2Q.root',
                   'ZZ4L.root',
                   'ZZ2L2Q.root',
                   'VV2L2Nu.root']
-VVSample.definition = '(gen_match_1 == 1 || gen_match_1 == 2) && gen_match_2 == 5'
+VVSample.definition = 'gen_match_2 == 5'
 VVSample.uncertainties = [
     TESUncertainty(),
     JES16Uncertainty(),

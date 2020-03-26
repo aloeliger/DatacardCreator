@@ -15,4 +15,4 @@ TTContamination.uncertainties = [
     ]
 TTContamination.eventDictionaryInstance = MuTauEventDictionary
 TTContamination.CreateEventWeight = TTContamination.CreateEventWeight_Standard
-TTContamination.endEntry = 4000
+TTContamination.endEntry = 5000

@@ -44,6 +44,43 @@ class MuonESUncertainty(Uncertainty):
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()                
 
+
+        """
+        nominallyBelongsInBin = False
+        modifiedBelongsInBin = False
+        printMe = False
+        if(nominalEventDictionary.eventDictionary["Njets"] == 1.0
+           and nominalEventDictionary.eventDictionary['MT'] < 50.0
+           and nominalEventDictionary.eventDictionary['TauPt'] >= 30.0
+           and nominalEventDictionary.eventDictionary['HiggsPt'] <= 60.0
+           #and nominalEventDictionary.eventDictionary['M_sv'] >= 150.0
+           #and nominalEventDictionary.eventDictionary['M_sv'] <= 170.0
+        ):
+            nominallyBelongsInBin = True            
+        if(modifiedEventDictionary.eventDictionary["Njets"] == 1.0
+           and modifiedEventDictionary.eventDictionary['MT'] < 50.0
+           and modifiedEventDictionary.eventDictionary['TauPt'] >= 30.0
+           and modifiedEventDictionary.eventDictionary['HiggsPt'] <= 60.0
+           #and modifiedEventDictionary.eventDictionary['M_sv'] >= 150.0
+           #and modifiedEventDictionary.eventDictionary['M_sv'] <= 170.0
+        ):
+            modifiedBelongsInBin = True
+           
+            
+        if nominallyBelongsInBin and not modifiedBelongsInBin:
+            #print("*****This event used to belong to the bin, but fell out****")
+            printMe = True
+        if not nominallyBelongsInBin and modifiedBelongsInBin:
+            #print("*****This event used to not belong to the bin, but entered****")
+            printMe = True
+
+        if printMe:
+            print("*****Up EventDictionary before:*****")
+            nominalEventDictionary.Print()
+            print("*****Up EventDictionary after:*****")
+            modifiedEventDictionary.Print()
+        """
+
         return modifiedEventDictionary
 
     def CreateMuonEtaLt1p2DownDictionary(self,theTree,nominalEventDictionary):
@@ -69,6 +106,43 @@ class MuonESUncertainty(Uncertainty):
 
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()        
+
+        """
+        nominallyBelongsInBin = False
+        modifiedBelongsInBin = False
+        printMe = False
+        if(nominalEventDictionary.eventDictionary["Njets"] == 1.0
+           and nominalEventDictionary.eventDictionary['MT'] < 50.0
+           and nominalEventDictionary.eventDictionary['TauPt'] >= 30.0
+           and nominalEventDictionary.eventDictionary['HiggsPt'] <= 60.0
+           #and nominalEventDictionary.eventDictionary['M_sv'] >= 150.0
+           #and nominalEventDictionary.eventDictionary['M_sv'] <= 170.0
+        ):
+            nominallyBelongsInBin = True            
+        if(modifiedEventDictionary.eventDictionary["Njets"] == 1.0
+           and modifiedEventDictionary.eventDictionary['MT'] < 50.0
+           and modifiedEventDictionary.eventDictionary['TauPt'] >= 30.0
+           and modifiedEventDictionary.eventDictionary['HiggsPt'] <= 60.0
+           #and modifiedEventDictionary.eventDictionary['M_sv'] >= 150.0
+           #and modifiedEventDictionary.eventDictionary['M_sv'] <= 170.0
+        ):
+            modifiedBelongsInBin = True
+           
+            
+        if nominallyBelongsInBin and not modifiedBelongsInBin:
+            print("*****This event used to belong to the bin, but fell out****")
+            printMe = True
+        if not nominallyBelongsInBin and modifiedBelongsInBin:
+            print("*****This event used to not belong to the bin, but entered****")
+            printMe = True
+
+        if printMe:
+            print("*****Down EventDictionary before:*****")
+            nominalEventDictionary.Print()
+            print("*****Down EventDictionary after:*****")
+            modifiedEventDictionary.Print()
+            print("")
+        """
 
         return modifiedEventDictionary
 

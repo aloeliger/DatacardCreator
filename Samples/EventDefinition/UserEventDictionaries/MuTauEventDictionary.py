@@ -35,6 +35,9 @@ def FillMuTauBasicQuantities(theEventDictionary,theTree):
         "SLJetPt": jetTwoVector.Pt(),
         "SLJetPhi": jetTwoVector.Phi(),
         "SLJetEta": jetTwoVector.Eta(),        
+        #"run": theTree.run,
+        #"lumi": theTree.lumi,
+        #"evt": theTree.evt,
     }
 def FillMuTauConstructedQuantities(theEventDictionary,theBasicQuantities):
     tauVector = ROOT.TLorentzVector()
