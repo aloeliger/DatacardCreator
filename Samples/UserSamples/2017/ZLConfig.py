@@ -17,7 +17,7 @@ DYLSample = Sample()
 DYLSample.name = 'ZL'
 DYLSample.path = '/data/aloeliger/SMHTT_Selected_2017_Deep/'
 DYLSample.files = ['DY.root','EWKZLL.root','EWKZNuNu.root']
-DYLSample.definition = 'gen_match_2 < 5'
+DYLSample.definition = 'gen_match_2 < 5 && !(numGenJets == 0 && njets > 1)'
 DYLSample.uncertainties = [
     TESUncertainty(),
     ZPTUncertainty(),

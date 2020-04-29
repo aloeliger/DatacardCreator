@@ -7,7 +7,7 @@ def IsInBoostedOneJetCategory(theAnalysisCategory,theEventDictionary):
             and theEventDictionary.eventDictionary['MT'] < 50.0
             and (theEventDictionary.eventDictionary['Njets'] == 1.0 or (theEventDictionary.eventDictionary['Njets'] >= 2.0 and theEventDictionary.eventDictionary['mjj']<=350.0))
             and theEventDictionary.eventDictionary['Njets'] == 1.0
-    ):        
+    ):                
         return True
     else:
         return False

@@ -11,6 +11,10 @@ def IsInBoostedGTETwoJetCategory(theAnalysisCategory,theEventDictionary):
         #theAnalysisCategory.dumpRLEFile.write(str(theEventDictionary.eventDictionary['run'])+' '
         #                                      +str(theEventDictionary.eventDictionary['lumi'])+' '
         #                                      +str(theEventDictionary.eventDictionary['evt'])+'\n')
+        #if (theEventDictionary.eventDictionary['HiggsPt'] > 250
+        #    and theEventDictionary.eventDictionary['M_sv'] > 90
+        #    and theEventDictionary.eventDictionary['M_sv'] < 110):
+        #    print theEventDictionary.Weight
         return True
     else:
         return False

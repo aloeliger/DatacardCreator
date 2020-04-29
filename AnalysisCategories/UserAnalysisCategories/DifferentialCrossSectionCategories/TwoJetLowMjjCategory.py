@@ -14,9 +14,9 @@ def IsInTwoJetLowCategory(theAnalysisCategory,theEventDictionary):
     return False
 
 TwoJetLow = AnalysisCategoryDef.AnalysisCategory()
-TwoJetLow.name = "mt_2jetlow"
+TwoJetLow.name = "mt_2jet_low"
 TwoJetLow.IsInCategory = IsInTwoJetLowCategory
 TwoJetLow.rollingVariable = 'HiggsPt'
-TwoJetLow.rollingBins = [0,20,45,80,120,200,350,10000]
+TwoJetLow.rollingBins = [0,45,80,120,200,350,10000]
 TwoJetLow.reconstructionVariable= 'M_sv'
 TwoJetLow.reconstructionBins = [50.0,70.0,90.0,110.0,130.0,150.0,170.0,210.0,250.0,9000.0]

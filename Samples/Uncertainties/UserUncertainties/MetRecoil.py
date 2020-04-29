@@ -134,7 +134,7 @@ class MetRecoilUncertainty(Uncertainty):
         new_msv = theTree.m_sv
         if(theTree.njets == 1):
             metVector.SetPtEtaPhiM(theTree.met_resolutionDown,0.0,theTree.metphi_resolutionDown,0.0)
-            new_msv = theTree.m_sv_ResolutionUp
+            new_msv = theTree.m_sv_ResolutionDown
         else:
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
