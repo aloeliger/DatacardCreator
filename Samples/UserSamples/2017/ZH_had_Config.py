@@ -11,7 +11,7 @@ from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Unce
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
 ZHSample = Sample()
-ZHSample.name = 'ZH_lep_htt125'
+ZHSample.name = 'ZH_had_htt125'
 ZHSample.path = '/data/aloeliger/SMHTT_Selected_2017_Deep/'
 ZHSample.files = ['ZH.root','GGZHQQTT.root']
 ZHSample.definition = 'Rivet_stage1_1_cat_pTjet30GeV < 400'
