@@ -14,7 +14,7 @@ ZHSample = Sample()
 ZHSample.name = 'ZH_FWDH_htt125'
 ZHSample.path = '/data/aloeliger/SMHTT_Selected_2017_Deep/'
 #ZHSample.files = ['ZH.root','GGZHLLTT.root']
-ZHSample.files = ['ZH.root','GGZHQQTT.root']
+ZHSample.files = ['ZH.root']
 ZHSample.definition = 'Rivet_stage1_1_cat_pTjet30GeV == 200'
 ZHSample.uncertainties = [
     TESUncertainty(),

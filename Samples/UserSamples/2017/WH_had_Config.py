@@ -7,6 +7,7 @@ from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
 from Samples.Uncertainties.UserUncertainties.TauID import TauIDUncertainty
 from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Uncertainty
+from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.VH_QCD_AcceptanceUncertainties.VH_scale_Inclusive_Uncertainty import VH_scale_Inclusive_Uncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -23,6 +24,7 @@ WHSample.uncertainties = [
     PrefiringUncertainty(),
     TauIDUncertainty(),
     Trigger1718Uncertainty(),
+    VH_scale_Inclusive_Uncertainty(),
 ]
 WHSample.eventDictionaryInstance = MuTauEventDictionary
 WHSample.CreateEventWeight = WHSample.CreateEventWeight_Standard

@@ -13,6 +13,7 @@ from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import M
 ZHSample = Sample()
 ZHSample.name = 'ZH_lep_FWDH_htt125'
 ZHSample.path = '/data/aloeliger/SMHTT_Selected_2017_Deep/'
+#ZHSample.files = ['ZH.root','GGZHLLTT.root']
 ZHSample.files = ['ZH.root']
 ZHSample.definition = 'Rivet_stage1_1_cat_pTjet30GeV == 400'
 ZHSample.uncertainties = [

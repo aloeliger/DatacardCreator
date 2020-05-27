@@ -24,9 +24,9 @@ VBFSample.uncertainties = [
     qqHTheoryUncertainty(),
     MetRecoilUncertainty(),
     MuonESUncertainty(),
-    PrefiringUncertainty(),    
+    PrefiringUncertainty(),
     TauIDUncertainty(),
-    Trigger1718Uncertainty(),
+    Trigger1718Uncertainty(),    
 ]
 VBFSample.eventDictionaryInstance = MuTauEventDictionary
 VBFSample.CreateEventWeight = VBFSample.CreateEventWeight_Standard

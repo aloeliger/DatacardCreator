@@ -7,6 +7,7 @@ from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
 from Samples.Uncertainties.UserUncertainties.TauID import TauIDUncertainty
 from Samples.Uncertainties.UserUncertainties.Trigger16 import Trigger16Uncertainty
+from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.VH_QCD_AcceptanceUncertainties.ZH_scale_zh_lowpt_Uncertainty import ZH_scale_zh_lowpt_Uncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -24,6 +25,7 @@ ZHSample.uncertainties = [
     PrefiringUncertainty(),
     TauIDUncertainty(),
     Trigger16Uncertainty(),
+    ZH_scale_zh_lowpt_Uncertainty()
 ]
 ZHSample.eventDictionaryInstance = MuTauEventDictionary
 ZHSample.CreateEventWeight = ZHSample.CreateEventWeight_Standard

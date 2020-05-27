@@ -9,6 +9,7 @@ from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
 from Samples.Uncertainties.UserUncertainties.TauID import TauIDUncertainty
 from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Uncertainty
+from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.ggH_QCD_AcceptanceUncertainties.ggH_scale_1jet_lowpt_Uncertainty import ggH_scale_ggH_1jet_lowpt_Uncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -27,6 +28,7 @@ ggHSample.uncertainties = [
     PrefiringUncertainty(),
     TauIDUncertainty(),
     Trigger1718Uncertainty(),
+    ggH_scale_ggH_1jet_lowpt_Uncertainty(),
 ]
 ggHSample.eventDictionaryInstance = MuTauEventDictionary
 ggHSample.CreateEventWeight = ggHSample.CreateEventWeight_Standard

@@ -9,6 +9,7 @@ from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertain
 from Samples.Uncertainties.UserUncertainties.TauID import TauIDUncertainty
 from Samples.Uncertainties.UserUncertainties.Trigger16 import Trigger16Uncertainty
 from Samples.Uncertainties.UserUncertainties.qqHTheory import qqHTheoryUncertainty
+from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.qqH_QCD_AcceptanceUncertainties.qqH_scale_Inclusive_Uncertainty import qqH_scale_Inclusive_Uncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -27,6 +28,7 @@ VBFSample.uncertainties = [
     TauIDUncertainty(),    
     Trigger16Uncertainty(),
     qqHTheoryUncertainty(),
+    qqH_scale_Inclusive_Uncertainty(),    
 ]
 VBFSample.eventDictionaryInstance = MuTauEventDictionary
 VBFSample.CreateEventWeight = VBFSample.CreateEventWeight_Standard
