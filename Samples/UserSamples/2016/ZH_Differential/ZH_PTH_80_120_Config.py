@@ -1,7 +1,7 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES_16 import JES16Uncertainty
+from Samples.Uncertainties.UserUncertainties.Signal_JES_16 import JES16Uncertainty
 from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
@@ -13,7 +13,7 @@ from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import M
 ZHSample = Sample()
 ZHSample.name = 'ZH_PTH_80_120_htt125'
 ZHSample.path = '/data/aloeliger/SMHTT_Selected_2016_Deep/'
-ZHSample.files = ['ZH.root','GGZHLLTT.root']
+ZHSample.files = ['ZH.root','GGZHLLTT.root','GGZHNNTT.root','GGZHQQTT.root']
 #ZHSample.files = ['ZH.root','GGZHLLTT.root','GGZHNNTT.root']
 ZHSample.definition = 'is_Fiducial == 1.0 && Rivet_higgsPt >= 80 && Rivet_higgsPt < 120'
 ZHSample.uncertainties = [

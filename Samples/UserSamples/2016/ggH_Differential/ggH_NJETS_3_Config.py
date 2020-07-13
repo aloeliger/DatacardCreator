@@ -1,7 +1,7 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES_16 import JES16Uncertainty
+from Samples.Uncertainties.UserUncertainties.Signal_JES_16 import JES16Uncertainty
 from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
 from Samples.Uncertainties.UserUncertainties.ggHTheory import ggHTheoryUncertainty
 from Samples.Uncertainties.UserUncertainties.MetRecoil import MetRecoilUncertainty

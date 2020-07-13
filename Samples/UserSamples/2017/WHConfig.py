@@ -1,7 +1,7 @@
 from Samples.SampleDefinition import Sample
 
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
-from Samples.Uncertainties.UserUncertainties.JES_17 import JES17Uncertainty
+from Samples.Uncertainties.UserUncertainties.Signal_JES_17 import JES17Uncertainty
 from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
@@ -25,7 +25,7 @@ WHSample.uncertainties = [
     PrefiringUncertainty(),
     TauIDUncertainty(),
     Trigger1718Uncertainty(),
-    VH_scale_vbf_Inclusive_Uncertainty(),
+    VH_scale_Inclusive_Uncertainty(),
     WH_scale_wh_lep_Inclusive_Uncertainty(),
 ]
 WHSample.eventDictionaryInstance = MuTauEventDictionary
