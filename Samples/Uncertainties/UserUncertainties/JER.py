@@ -29,6 +29,7 @@ class JERUncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JERUp
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JERUp
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JERUp
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JERUp
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -50,6 +51,7 @@ class JERUncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JERDown
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JERDown
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JERDown
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JERDown
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()

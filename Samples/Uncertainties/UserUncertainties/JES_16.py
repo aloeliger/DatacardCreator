@@ -69,6 +69,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetAbsoluteUp
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetAbsoluteUp
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetAbsoluteUp
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetAbsoluteUp
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -90,6 +91,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetAbsoluteDown
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetAbsoluteDown
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetAbsoluteDown
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetAbsoluteDown
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -111,6 +113,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetAbsoluteyearUp
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetAbsoluteyearUp
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetAbsoluteyearUp
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetAbsoluteyearUp
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -132,6 +135,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetAbsoluteyearDown
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetAbsoluteyearDown
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetAbsoluteyearDown
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetAbsoluteyearDown
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -154,6 +158,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetBBEC1Up
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetBBEC1Up
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetBBEC1Up
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetBBEC1Up
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -175,6 +180,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetBBEC1Down
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetBBEC1Down
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetBBEC1Down
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetBBEC1Down
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -196,6 +202,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetBBEC1yearUp
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetBBEC1yearUp
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetBBEC1yearUp
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetBBEC1yearUp
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -217,6 +224,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetBBEC1yearDown
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetBBEC1yearDown
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetBBEC1yearDown
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetBBEC1yearDown
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -238,6 +246,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetEC2Up
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetEC2Up
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetEC2Up
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetEC2Up
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -259,6 +268,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetEC2Down
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetEC2Down
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetEC2Down
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetEC2Down
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -280,6 +290,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetEC2yearUp
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetEC2yearUp
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetEC2yearUp
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetEC2yearUp
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -301,6 +312,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetEC2yearDown
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetEC2yearDown
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetEC2yearDown
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetEC2yearDown
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -322,6 +334,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetFlavorQCDUp
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetFlavorQCDUp
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetFlavorQCDUp
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetFlavorQCDUp
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -343,6 +356,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetFlavorQCDDown
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetFlavorQCDDown
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetFlavorQCDDown
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetFlavorQCDDown
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -364,6 +378,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetHFUp
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetHFUp
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetHFUp
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetHFUp
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -385,6 +400,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetHFDown
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetHFDown
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetHFDown
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetHFDown
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -406,6 +422,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetHFyearUp
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetHFyearUp
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetHFyearUp
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetHFyearUp
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -427,6 +444,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetHFyearDown
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetHFyearDown
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetHFyearDown
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetHFyearDown
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -448,6 +466,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetRelativeSampleUp
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetRelativeSampleUp
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetRelativeSampleUp
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetRelativeSampleUp
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -469,6 +488,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetRelativeSampleDown
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetRelativeSampleDown
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetRelativeSampleDown
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetRelativeSampleDown
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -490,6 +510,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetRelativeBalUp
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetRelativeBalUp
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetRelativeBalUp
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetRelativeBalUp
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
@@ -511,6 +532,7 @@ class JES16Uncertainty(Uncertainty):
         modifiedEventDictionary.basicQuantities['Njets'] = theTree.njets_JetRelativeBalDown
         modifiedEventDictionary.basicQuantities['mjj'] = theTree.mjj_JetRelativeBalDown
         modifiedEventDictionary.basicQuantities['M_sv'] = theTree.m_sv_JetRelativeBalDown
+        modifiedEventDictionary.basicQuantities['LJetPt'] = theTree.jpt_1_JetRelativeBalDown
         
         modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
         modifiedEventDictionary.CompileCompleteDictionary()
