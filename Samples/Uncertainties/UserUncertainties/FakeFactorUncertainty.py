@@ -26,8 +26,14 @@ class FakeFactorUncertainty(Uncertainty):
 	    "CMS_FF_closure_lpt_mt_wUp",
 	    "CMS_FF_closure_lpt_mt_ttUp",
             "CMS_FF_closure_OSSS_mvis_mt_qcdUp",            
-            "CMS_FF_closure_mt_mt_w_unc1Up",
-            "CMS_FF_closure_mt_mt_w_unc2Up",
+            #"CMS_FF_closure_mt_mt_w_unc1Up",
+            #"CMS_FF_closure_mt_mt_w_unc2Up",
+            "CMS_FF_closure_pth_mt_wUp",
+            "CMS_FF_norm_mt_0jetUp",
+            "CMS_FF_norm_mt_1jetUp",
+            "CMS_FF_norm_mt_2jetUp",
+            "CMS_FF_norm_mt_3jetUp",
+            "CMS_FF_norm_mt_4jetUp",
             "CMS_rawFF_mt_qcd_0jet_unc1Down",
             "CMS_rawFF_mt_qcd_0jet_unc2Down",
             "CMS_rawFF_mt_qcd_1jet_unc1Down",
@@ -49,8 +55,14 @@ class FakeFactorUncertainty(Uncertainty):
 	    "CMS_FF_closure_lpt_mt_wDown",
 	    "CMS_FF_closure_lpt_mt_ttDown",
             "CMS_FF_closure_OSSS_mvis_mt_qcdDown",            
-            "CMS_FF_closure_mt_mt_w_unc1Down",
-            "CMS_FF_closure_mt_mt_w_unc2Down",
+            #"CMS_FF_closure_mt_mt_w_unc1Down",
+            #"CMS_FF_closure_mt_mt_w_unc2Down",
+            "CMS_FF_closure_pth_mt_wDown",
+            "CMS_FF_norm_mt_0jetDown",
+            "CMS_FF_norm_mt_1jetDown",
+            "CMS_FF_norm_mt_2jetDown",
+            "CMS_FF_norm_mt_3jetDown",
+            "CMS_FF_norm_mt_4jetDown",
             ]
         self.eventDictionaryModifications = {
             "CMS_rawFF_mt_qcd_0jet_unc1Up":self.CreateRawQCD0JetUnc1UpDictionary,
@@ -74,8 +86,14 @@ class FakeFactorUncertainty(Uncertainty):
 	    "CMS_FF_closure_lpt_mt_wUp":self.CreateLPTClosureWUpDictionary,
 	    "CMS_FF_closure_lpt_mt_ttUp":self.CreateLPTClosureTTUpDictionary,
             "CMS_FF_closure_OSSS_mvis_mt_qcdUp":self.CreateOSSSClosureQCDUnc1UpDictionary,
-            "CMS_FF_closure_mt_mt_w_unc1Up":self.CreateMTClosureWUnc1UpDictionary,
-            "CMS_FF_closure_mt_mt_w_unc2Up":self.CreateMTClosureWUnc2UpDictionary,
+            #"CMS_FF_closure_mt_mt_w_unc1Up":self.CreateMTClosureWUnc1UpDictionary,
+            #"CMS_FF_closure_mt_mt_w_unc2Up":self.CreateMTClosureWUnc2UpDictionary,
+            "CMS_FF_closure_pth_mt_wUp":self.CreatePTHClosureUncUpDictionary,
+            "CMS_FF_norm_mt_0jetUp":self.CreateNJet0NormUpDictionary,
+            "CMS_FF_norm_mt_1jetUp":self.CreateNJet1NormUpDictionary,
+            "CMS_FF_norm_mt_2jetUp":self.CreateNJet2NormUpDictionary,
+            "CMS_FF_norm_mt_3jetUp":self.CreateNJet3NormUpDictionary,
+            "CMS_FF_norm_mt_4jetUp":self.CreateNJet4NormUpDictionary,
             "CMS_rawFF_mt_qcd_0jet_unc1Down":self.CreateRawQCD0JetUnc1DownDictionary,
             "CMS_rawFF_mt_qcd_0jet_unc2Down":self.CreateRawQCD0JetUnc2DownDictionary,
             "CMS_rawFF_mt_qcd_1jet_unc1Down":self.CreateRawQCD1JetUnc1DownDictionary,
@@ -97,8 +115,14 @@ class FakeFactorUncertainty(Uncertainty):
 	    "CMS_FF_closure_lpt_mt_wDown":self.CreateLPTClosureWDownDictionary,
 	    "CMS_FF_closure_lpt_mt_ttDown":self.CreateLPTClosureTTDownDictionary,
             "CMS_FF_closure_OSSS_mvis_mt_qcdDown":self.CreateOSSSClosureQCDUnc1DownDictionary,            
-            "CMS_FF_closure_mt_mt_w_unc1Down":self.CreateMTClosureWUnc1DownDictionary,
-            "CMS_FF_closure_mt_mt_w_unc2Down":self.CreateMTClosureWUnc2DownDictionary
+            #"CMS_FF_closure_mt_mt_w_unc1Down":self.CreateMTClosureWUnc1DownDictionary,
+            #"CMS_FF_closure_mt_mt_w_unc2Down":self.CreateMTClosureWUnc2DownDictionary,
+            "CMS_FF_closure_pth_mt_wDown":self.CreatePTHClosureUncDownDictionary,
+            "CMS_FF_norm_mt_0jetDown":self.CreateNJet0NormDownDictionary,
+            "CMS_FF_norm_mt_1jetDown":self.CreateNJet1NormDownDictionary,
+            "CMS_FF_norm_mt_2jetDown":self.CreateNJet2NormDownDictionary,
+            "CMS_FF_norm_mt_3jetDown":self.CreateNJet3NormDownDictionary,
+            "CMS_FF_norm_mt_4jetDown":self.CreateNJet4NormDownDictionary,
             }
 
         #QCD raw uncerts
@@ -356,5 +380,65 @@ class FakeFactorUncertainty(Uncertainty):
     def CreateOSSSClosureQCDUnc1DownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
         modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.osssclosure_qcd_unc1_down
+        return modifiedEventDictionary
+    def CreatePTHClosureUncUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.pthclosure_w_up
+        return modifiedEventDictionary
+    def CreatePTHClosureUncDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.pthclosure_w_down
+        return modifiedEventDictionary
+
+    def CreateNJet0NormUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        if modifiedEventDictionary.basicQuantities['Njets'] == 0:
+            modifiedEventDictionary.Weight = modifiedEventDictionary.Weight * 1.05
+        return modifiedEventDictionary
+    def CreateNJet1NormUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        if modifiedEventDictionary.basicQuantities['Njets'] == 1:
+            modifiedEventDictionary.Weight = modifiedEventDictionary.Weight * 1.05
+        return modifiedEventDictionary
+    def CreateNJet2NormUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        if modifiedEventDictionary.basicQuantities['Njets'] == 2:
+            modifiedEventDictionary.Weight = modifiedEventDictionary.Weight * 1.05
+        return modifiedEventDictionary
+    def CreateNJet3NormUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        if modifiedEventDictionary.basicQuantities['Njets'] == 3:
+            modifiedEventDictionary.Weight = modifiedEventDictionary.Weight * 1.05
+        return modifiedEventDictionary
+    def CreateNJet4NormUpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        if modifiedEventDictionary.basicQuantities['Njets'] >= 4:
+            modifiedEventDictionary.Weight = modifiedEventDictionary.Weight * 1.05
+        return modifiedEventDictionary
+
+    def CreateNJet0NormDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        if modifiedEventDictionary.basicQuantities['Njets'] == 0:
+            modifiedEventDictionary.Weight = modifiedEventDictionary.Weight * 0.95
+        return modifiedEventDictionary
+    def CreateNJet1NormDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        if modifiedEventDictionary.basicQuantities['Njets'] == 1:
+            modifiedEventDictionary.Weight = modifiedEventDictionary.Weight * 0.95
+        return modifiedEventDictionary
+    def CreateNJet2NormDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        if modifiedEventDictionary.basicQuantities['Njets'] == 2:
+            modifiedEventDictionary.Weight = modifiedEventDictionary.Weight * 0.95
+        return modifiedEventDictionary
+    def CreateNJet3NormDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        if modifiedEventDictionary.basicQuantities['Njets'] == 3:
+            modifiedEventDictionary.Weight = modifiedEventDictionary.Weight * 0.95
+        return modifiedEventDictionary
+    def CreateNJet4NormDownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        if modifiedEventDictionary.basicQuantities['Njets'] >= 4:
+            modifiedEventDictionary.Weight = modifiedEventDictionary.Weight * 0.95
         return modifiedEventDictionary
 
