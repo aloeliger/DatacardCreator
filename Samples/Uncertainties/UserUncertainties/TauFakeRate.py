@@ -21,6 +21,12 @@ class TauFakeRateUncertainty(Uncertainty):
             "CMS_m_FakeTau_taupt40to50Down",
             "CMS_m_FakeTau_tauptgt50Up",
             "CMS_m_FakeTau_tauptgt50Down",
+            "CMS_m_FakeTau_taupt30to50Up",
+            "CMS_m_FakeTau_taupt30to50Down",
+            "CMS_m_FakeTau_taupt50to70Up",
+            "CMS_m_FakeTau_taupt50to70Down",
+            "CMS_m_FakeTau_tauptgt70Up",
+            "CMS_m_FakeTau_tauptgt70Down",
             ]
         self.eventDictionaryModifications = {
             "CMS_m_FakeTau_etalt0p4Up":self.CreateTauFakeRateEtaLT0p4UpDictionary,
@@ -39,6 +45,12 @@ class TauFakeRateUncertainty(Uncertainty):
             "CMS_m_FakeTau_taupt40to50Down":self.CreateTauFakeRatePt40to50DownDictionary,
             "CMS_m_FakeTau_tauptgt50Up":self.CreateTauFakeRatePtGT50UpDictionary,
             "CMS_m_FakeTau_tauptgt50Down":self.CreateTauFakeRatePtGT50DownDictionary,
+            "CMS_m_FakeTau_taupt30to50Up":self.CreateTauFakeRatePt30to50UpDictionary,
+            "CMS_m_FakeTau_taupt30to50Down":self.CreateTauFakeRatePt30to50DownDictionary,
+            "CMS_m_FakeTau_taupt50to70Up":self.CreateTauFakeRatePt50to70UpDictionary,
+            "CMS_m_FakeTau_taupt50to70Down":self.CreateTauFakeRatePt50to70DownDictionary,
+            "CMS_m_FakeTau_tauptgt70Up":self.CreateTauFakeRatePtGT70UpDictionary,
+            "CMS_m_FakeTau_tauptgt70Down":self.CreateTauFakeRatePtGT70DownDictionary,
             }
     def CreateTauFakeRateEtaLT0p4UpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
@@ -104,4 +116,29 @@ class TauFakeRateUncertainty(Uncertainty):
     def CreateTauFakeRatePtGT50DownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
         modifiedEventDictionary.Weight = theTree.FinalWeighting_TauFakeRateWeight_tauptgt50_DOWN
+        return modifiedEventDictionary
+
+    def CreateTauFakeRatePt30to50UpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting_TauFakeRateWeight_taupt30to50_UP
+        return modifiedEventDictionary
+    def CreateTauFakeRatePt30to50DownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting_TauFakeRateWeight_taupt30to50_DOWN
+        return modifiedEventDictionary
+    def CreateTauFakeRatePt50to70UpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting_TauFakeRateWeight_taupt50to70_UP
+        return modifiedEventDictionary
+    def CreateTauFakeRatePt50to70DownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting_TauFakeRateWeight_taupt50to70_DOWN
+        return modifiedEventDictionary
+    def CreateTauFakeRatePtGT70UpDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting_TauFakeRateWeight_tauptgt70_UP
+        return modifiedEventDictionary
+    def CreateTauFakeRatePtGT70DownDictionary(self,theTree,nominalEventDictionary):
+        modifiedEventDictionary = nominalEventDictionary.Clone()
+        modifiedEventDictionary.Weight = theTree.FinalWeighting_TauFakeRateWeight_tauptgt70_DOWN
         return modifiedEventDictionary
