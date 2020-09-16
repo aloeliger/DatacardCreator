@@ -14,9 +14,9 @@ from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import M
 VVSample = Sample()
 VVSample.name = 'VVL'
 VVSample.path = '/data/aloeliger/SMHTT_Selected_2016_Deep/'
-VVSample.files = ['WW1L1Nu2Q.root',
-                  'WZ1L1Nu2Q.root',
-                  'WZ1L3Nu.root',
+VVSample.files = [#'WW1L1Nu2Q.root',
+                  #'WZ1L1Nu2Q.root',
+                  #'WZ1L3Nu.root',
                   'WZ3L1Nu.root',
                   'WZ2L2Q.root',
                   'ZZ4L.root',
