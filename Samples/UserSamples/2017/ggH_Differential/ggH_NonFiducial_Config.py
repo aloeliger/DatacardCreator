@@ -15,7 +15,7 @@ from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import M
 ggHSample = Sample()
 ggHSample.name = 'ggH_htt_nonfid125'
 ggHSample.path = '/data/aloeliger/SMHTT_Selected_2017_Deep/'
-ggHSample.files = ['ggH.root','GGHWW']
+ggHSample.files = ['ggH.root','GGHWW.root']
 ggHSample.definition = 'is_Fiducial == 0.0'
 ggHSample.uncertainties = [
     TESUncertainty(),
