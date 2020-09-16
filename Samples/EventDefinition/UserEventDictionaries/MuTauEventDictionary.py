@@ -8,10 +8,15 @@ def FillMuTauBasicQuantities(theEventDictionary,theTree):
     METVector = ROOT.TLorentzVector()
     jetOneVector = ROOT.TLorentzVector()
     jetTwoVector = ROOT.TLorentzVector()
+    leadingJetPt = 0
+    if theTree.jpt_1 < 0:
+        leadingJetPt = 0
+    else:
+        leadingJetPt = theTree.jpt_1
     muVector.SetPtEtaPhiM(theTree.pt_1,theTree.eta_1,theTree.phi_1,theTree.m_1)
     tauVector.SetPtEtaPhiM(theTree.pt_2,theTree.eta_2,theTree.phi_2,theTree.m_2)
     METVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
-    jetOneVector.SetPtEtaPhiM(theTree.jpt_1,theTree.jeta_1,theTree.jphi_1,0.0)
+    jetOneVector.SetPtEtaPhiM(leadingJetPt,theTree.jeta_1,theTree.jphi_1,0.0)
     jetTwoVector.SetPtEtaPhiM(theTree.jpt_2,theTree.jeta_2,theTree.jphi_2,0.0)
     theEventDictionary.basicQuantities = {
         "MuPt": muVector.Pt(),
@@ -57,7 +62,7 @@ def FillMuTauConstructedQuantities(theEventDictionary,theBasicQuantities):
                               theBasicQuantities["SLJetEta"],
                               0.0)
     MVis = (tauVector+muVector).M()
-    HiggsPt = (tauVector+muVector+METVector).Pt()
+    HiggsPt = (tauVector+muVector+METVector).Pt() * 1.05 #factor added here for differential. This is the calculated shift off gen truth.
     MT = math.sqrt(2.0*muVector.Pt()*METVector.Pt()*(1.0-math.cos(muVector.DeltaPhi(METVector))))
     Higgs_jjPt = (tauVector+muVector+METVector+jetOneVector+jetTwoVector).Pt()
     DeltaR = tauVector.DeltaR(muVector)    
