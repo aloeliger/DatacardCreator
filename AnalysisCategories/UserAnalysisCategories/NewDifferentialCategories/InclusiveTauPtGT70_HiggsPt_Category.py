@@ -6,6 +6,7 @@ def IsInHighTauPtCategory(theAnalysisCategory,theEventDictionary):
             theEventDictionary.eventDictionary["TauPt"] >= 30.0
             and theEventDictionary.eventDictionary['MT'] < 50.0
             and theEventDictionary.eventDictionary["TauPt"] >= 70.0
+            and not (theEventDictionary.eventDictionary['Njets'] == 0 and theEventDictionary.eventDictionary['DeltaR'] < 2.0)
     ):
         return True
     else:
