@@ -8,8 +8,14 @@ from Samples.Uncertainties.UserUncertainties.EmbeddedMuonES import EmbeddedMuonE
 from Samples.Uncertainties.UserUncertainties.EmbeddedTauID import EmbeddedTauIDUncertainty
 from Samples.Uncertainties.UserUncertainties.EmbeddedTrackingUncertainty import EmbeddedTrackingUncertainty
 
+from Samples.Uncertainties.UserUncertainties.EmbeddedZeroJetUncertainty import EmbeddedZeroJetUncertainty
+
 # event definition
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
+
+#just something to check the embedded normalizationa nd whether that is causing us problems
+def CreateEventWeight_Standard_Reduced(theEventDictionary,theTree):
+    theEventDictionary.Weight = theTree.FinalWeighting * 0.95
 
 #subtraction and final histogram creation
 def PerformTTbarContaminationSubtraction(theOutputHistograms,analysisCategory):    
@@ -36,7 +42,9 @@ EmbeddedSample.uncertainties = [
     EmbeddedMuonESUncertainty(),
     EmbeddedTauIDUncertainty(),
     EmbeddedTrackingUncertainty(),
+    EmbeddedZeroJetUncertainty(),
     ]
 EmbeddedSample.eventDictionaryInstance = MuTauEventDictionary
 EmbeddedSample.CreateEventWeight = EmbeddedSample.CreateEventWeight_Standard
+#EmbeddedSample.CreateEventWeight = CreateEventWeight_Standard_Reduced
 EmbeddedSample.EndAction = PerformTTbarContaminationSubtraction

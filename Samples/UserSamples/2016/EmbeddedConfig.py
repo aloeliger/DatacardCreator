@@ -8,6 +8,8 @@ from Samples.Uncertainties.UserUncertainties.EmbeddedMuonES import EmbeddedMuonE
 from Samples.Uncertainties.UserUncertainties.EmbeddedTauID import EmbeddedTauIDUncertainty
 from Samples.Uncertainties.UserUncertainties.EmbeddedTrackingUncertainty import EmbeddedTrackingUncertainty
 
+from Samples.Uncertainties.UserUncertainties.EmbeddedZeroJetUncertainty import EmbeddedZeroJetUncertainty
+
 # event definition
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -36,6 +38,7 @@ EmbeddedSample.uncertainties = [
     EmbeddedMuonESUncertainty(),
     EmbeddedTauIDUncertainty(),
     EmbeddedTrackingUncertainty(),
+    EmbeddedZeroJetUncertainty(),
     ]
 EmbeddedSample.eventDictionaryInstance = MuTauEventDictionary
 EmbeddedSample.CreateEventWeight = EmbeddedSample.CreateEventWeight_Standard
