@@ -8,11 +8,11 @@ from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
 from Samples.Uncertainties.UserUncertainties.TauID import TauIDUncertainty
 from Samples.Uncertainties.UserUncertainties.Trigger16 import Trigger16Uncertainty
-from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.PTH_QCD_Uncertainties.GGZH_QCDScale_Uncertainty import GGZH_QCDScale_Uncertainty
-from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.PTH_QCD_Uncertainties.VH_QCDScale_Uncertainty import VH_QCDScale_Uncertainty
-from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.PTH_QCD_Uncertainties.ggH_QCDScale_Uncertainty import ggH_QCDScale_Uncertainty
-from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.PTH_QCD_Uncertainties.qqH_QCDScale_Uncertainty import qqH_QCDScale_Uncertainty
-from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.PTH_QCD_Uncertainties.ttH_QCDScale_Uncertainty import ttH_QCDScale_Uncertainty
+from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.Raw_QCD_Uncertainties.GGZH_QCDScale_Uncertainty import ggZH_QCDScale_Uncertainty
+from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.Raw_QCD_Uncertainties.VH_QCDScale_Uncertainty import VH_QCDScale_Uncertainty
+from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.Raw_QCD_Uncertainties.ggH_QCDScale_Uncertainty import ggH_QCDScale_Uncertainty
+from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.Raw_QCD_Uncertainties.qqH_QCDScale_Uncertainty import qqH_QCDScale_Uncertainty
+from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.Raw_QCD_Uncertainties.ttH_QCDScale_Uncertainty import ttH_QCDScale_Uncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -45,7 +45,7 @@ ggHSample.uncertainties = [
     PrefiringUncertainty(),
     TauIDUncertainty(),
     Trigger16Uncertainty(),
-    GGZH_QCDScale_Uncertainty(),
+    ggZH_QCDScale_Uncertainty(),
     VH_QCDScale_Uncertainty(),
     qqH_QCDScale_Uncertainty(),
     ttH_QCDScale_Uncertainty(),
