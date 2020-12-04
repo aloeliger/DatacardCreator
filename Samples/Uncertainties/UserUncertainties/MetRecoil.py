@@ -1,5 +1,6 @@
 from Samples.Uncertainties.UncertaintyDef import Uncertainty
 import ROOT
+import math
 
 class MetRecoilUncertainty(Uncertainty):
     def __init__(self):
@@ -42,12 +43,14 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_resolutionUp) - math.pi/2.0))) <= -8 or theTree.metphi_resolutionUp == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
         
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
 
@@ -61,12 +64,14 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_resolutionDown) - math.pi/2.0))) <= -8 or theTree.metphi_resolutionDown == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
         
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
         
@@ -80,12 +85,14 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_responseUp) - math.pi/2.0))) <= -8 or theTree.metphi_responseUp == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
         
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
 
@@ -99,12 +106,14 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_responseDown) - math.pi/2.0))) <= -8 or theTree.metphi_responseDown == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
         
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
 
@@ -120,12 +129,14 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
-        
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_resolutionUp) - math.pi/2.0))) <= -8 or theTree.metphi_resolutionUp == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+            
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
 
@@ -139,12 +150,14 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
-        
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_resolutionDown) - math.pi/2.0))) <= -8 or theTree.metphi_resolutionDown == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+            
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
         
@@ -158,12 +171,14 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
-        
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_responseUp) - math.pi/2.0))) <= -8 or theTree.metphi_responseUp == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+            
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
 
@@ -177,12 +192,14 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_responseDown) - math.pi/2.0))) <= -8 or theTree.metphi_responseDown == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
         
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
 
@@ -197,13 +214,15 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
-        
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
-
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_resolutionUp) - math.pi/2.0))) <= -8 or theTree.metphi_resolutionUp == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+            
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
+            
         return modifiedEventDictionary
 
     def CreateReso2JetDownDictionary(self,theTree,nominalEventDictionary):
@@ -216,12 +235,14 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_resolutionDown) - math.pi/2.0))) <= -8 or theTree.metphi_resolutionDown == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
         
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
         
@@ -235,12 +256,14 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_responseUp) - math.pi/2.0))) <= -8 or theTree.metphi_responseUp == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
         
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
 
@@ -254,11 +277,13 @@ class MetRecoilUncertainty(Uncertainty):
             metVector.SetPtEtaPhiM(theTree.met,0.0,theTree.metphi,0.0)
 
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
-        modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
-        modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
+        #detects default values and doesn't change the dictionary (filters out samples that don't have proper recoil values, and leaves them nominal')
+        if not (math.floor(math.log10(abs(abs(theTree.metphi_responseDown) - math.pi/2.0))) <= -8 or theTree.metphi_responseDown == 0): #TEMPORARY I HOPE HOPE HOPE
+            modifiedEventDictionary.basicQuantities['MET'] = metVector.Pt()
+            modifiedEventDictionary.basicQuantities['METPhi'] = metVector.Phi()
+            modifiedEventDictionary.basicQuantities['M_sv'] = new_msv
         
-        modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
-        modifiedEventDictionary.CompileCompleteDictionary()
+            modifiedEventDictionary.FillConstructedQuantities(modifiedEventDictionary,modifiedEventDictionary.basicQuantities)
+            modifiedEventDictionary.CompileCompleteDictionary()
 
         return modifiedEventDictionary
