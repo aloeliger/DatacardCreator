@@ -46,79 +46,118 @@ class ggHTheoryUncertainty(Uncertainty):
         }
     def CreateMuUpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_Mu_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_Mu_13TeV))
+        except:
+            pass
         
         return modifiedEventDictionary
 
     def CreateMuDownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_Mu_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_Mu_13TeV))
+        except:
+            pass
     
         return modifiedEventDictionary
         
     def CreateResUpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_Res_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_Res_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateResDownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_Res_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_Res_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateMig01UpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_Mig01_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_Mig01_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateMig01DownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_Mig01_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_Mig01_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateMig12UpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_Mig12_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_Mig12_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateMig12DownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_Mig12_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_Mig12_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateVBF2jUpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_VBF2j_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_VBF2j_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateVBF2jDownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_VBF2j_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_VBF2j_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateVBF3jUpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_VBF3j_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_VBF3j_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateVBF3jDownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_VBF3j_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_VBF3j_13TeV))
+        except:
+            pass
         
         return modifiedEventDictionary
 
     def CreatePT60UpDictinoary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_PT60_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_PT60_13TeV))
+        except:
+            pass
         
         return modifiedEventDictionary
 
@@ -130,24 +169,36 @@ class ggHTheoryUncertainty(Uncertainty):
 
     def CreatePT120UpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_PT120_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_PT120_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreatePT120DownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_PT120_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_PT120_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateqmtopUpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_qmtop_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0+theTree.THU_ggH_qmtop_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
 
     def CreateqmtopDownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_qmtop_13TeV))
+        try:
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting*(1.0-theTree.THU_ggH_qmtop_13TeV))
+        except:
+            pass
 
         return modifiedEventDictionary
