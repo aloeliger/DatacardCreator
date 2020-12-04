@@ -13,7 +13,7 @@ from Samples.Uncertainties.UserUncertainties.Trigger17_18 import Trigger1718Unce
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
 ggHSample = Sample()
-ggHSample.name = 'ggH_htt_nonfid125'
+ggHSample.name = 'ggH_nonfid125'
 ggHSample.path = '/data/aloeliger/SMHTT_Selected_2017_Deep/'
 ggHSample.files = ['ggH.root','GGHWW.root']
 ggHSample.definition = 'is_Fiducial == 0.0'

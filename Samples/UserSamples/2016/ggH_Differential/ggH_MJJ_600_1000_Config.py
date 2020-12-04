@@ -13,7 +13,7 @@ from Samples.Uncertainties.UserUncertainties.Trigger16 import Trigger16Uncertain
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
 ggHSample = Sample()
-ggHSample.name = 'ggH_MJJ_600_1000_htt125'
+ggHSample.name = 'ggH_MJJ_600_1000'
 ggHSample.path = '/data/aloeliger/SMHTT_Selected_2016_Deep/'
 ggHSample.files = ['ggH.root']
 ggHSample.definition = 'is_Fiducial == 1.0 && Rivet_mjj > 600 && Rivet_mjj < 1000'
