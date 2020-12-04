@@ -14,7 +14,7 @@ def IsInLowTauPtCategory(theAnalysisCategory,theEventDictionary):
     return False
 
 LowTauPtCategory = AnalysisCategoryDef.AnalysisCategory()
-LowTauPtCategory.name = 'mt_LowTauPt_HiggsPt'
+LowTauPtCategory.name = 'htt_PTH_mt_LowTauPt'
 LowTauPtCategory.IsInCategory = IsInLowTauPtCategory
 LowTauPtCategory.rollingVariable = 'HiggsPt'
 LowTauPtCategory.rollingBins = [0,45,80,120,200,350,100000000]

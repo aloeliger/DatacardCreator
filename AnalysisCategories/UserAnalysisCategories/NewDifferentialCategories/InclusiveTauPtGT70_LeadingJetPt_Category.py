@@ -15,7 +15,7 @@ def IsInHighTauPtCategory(theAnalysisCategory,theEventDictionary):
     return False
 
 HighTauPtCategory = AnalysisCategoryDef.AnalysisCategory()
-HighTauPtCategory.name = 'mt_HighTauPt_LeadingJetPt'
+HighTauPtCategory.name = 'htt_J1PT_mt_HighTauPt'
 HighTauPtCategory.IsInCategory = IsInHighTauPtCategory
 HighTauPtCategory.rollingVariable = 'LJetPt'
 HighTauPtCategory.rollingBins = [0,30,60,120,200,350,100000000]

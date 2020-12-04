@@ -15,7 +15,7 @@ def IsInIntermediateTauPtCategory(theAnalysisCategory,theEventDictionary):
     return False
 
 IntermediateTauPtCategory = AnalysisCategoryDef.AnalysisCategory()
-IntermediateTauPtCategory.name = 'mt_IntermediateTauPt_NJets'
+IntermediateTauPtCategory.name = 'htt_NJ_mt_IntermediateTauPt'
 IntermediateTauPtCategory.IsInCategory = IsInIntermediateTauPtCategory
 IntermediateTauPtCategory.rollingVariable = 'Njets'
 IntermediateTauPtCategory.rollingBins = [0,1,2,3,4,20]
