@@ -14,16 +14,16 @@ class VH_QCDScale_Uncertainty(Uncertainty):
         }
     def CreateQCDScaleVHDictionaryUp(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        try:            
-            modifiedEventDictionary.Weight = theTree.FinalWeighting_RawQCDScaleAcceptance_VHUP
-        except:
-            pass
+        modifiedEventDictionary.Weight = theTree.FinalWeighting_RawQCDScaleAcceptance_VHUP
+        if modifiedEventDictionary.Weight == 0:
+            return nominalEventDictionary
         return modifiedEventDictionary
+
 
     def CreateQCDScaleVHDictionaryDown(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        try:            
-            modifiedEventDictionary.Weight = theTree.FinalWeighting_RawQCDScaleAcceptance_VHDOWN
-        except:
-            pass
+        modifiedEventDictionary.Weight = theTree.FinalWeighting_RawQCDScaleAcceptance_VHDOWN
+        if modifiedEventDictionary.Weight == 0:
+            return nominalEventDictionary
         return modifiedEventDictionary
+

@@ -45,160 +45,199 @@ class ggHTheory_Differential_PTH_Normalized_Uncertainty(Uncertainty):
             'THU_ggH_qmtopDown':self.CreateqmtopDownDictionary,
         }
     def CreateMuUpDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_Mu_pth_UP*(1.0+theTree.THU_ggH_Mu_13TeV))
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
+
+            return modifiedEventDictionary
         except:
-            pass
-        
-        return modifiedEventDictionary
+            return nominalEventDictionary
 
     def CreateMuDownDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_Mu_pth_DOWN*(1.0-theTree.THU_ggH_Mu_13TeV))
-        except:
-            pass
-    
-        return modifiedEventDictionary
-        
-    def CreateResUpDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
-        try:
-            modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_Res_pth_UP*(1.0+theTree.THU_ggH_Res_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
+
+    def CreateResUpDictionary(self,theTree,nominalEventDictionary):
+        try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_Res_pth_UP*(1.0+theTree.THU_ggH_Res_13TeV))
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
+
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateResDownDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_Res_pth_DOWN*(1.0-theTree.THU_ggH_Res_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateMig01UpDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_Mig01_pth_UP*(1.0+theTree.THU_ggH_Mig01_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateMig01DownDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_Mig01_pth_DOWN*(1.0-theTree.THU_ggH_Mig01_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateMig12UpDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_Mig12_pth_UP*(1.0+theTree.THU_ggH_Mig12_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateMig12DownDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_Mig12_pth_DOWN*(1.0-theTree.THU_ggH_Mig12_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateVBF2jUpDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_VBF2j_pth_UP*(1.0+theTree.THU_ggH_VBF2j_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateVBF2jDownDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_VBF2j_pth_DOWN*(1.0-theTree.THU_ggH_VBF2j_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateVBF3jUpDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_VBF3j_pth_UP*(1.0+theTree.THU_ggH_VBF3j_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateVBF3jDownDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_VBF3j_pth_DOWN*(1.0-theTree.THU_ggH_VBF3j_13TeV))
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
+
+            return modifiedEventDictionary
         except:
-            pass
-        
-        return modifiedEventDictionary
+            return nominalEventDictionary
 
     def CreatePT60UpDictinoary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_PT60_pth_UP*(1.0+theTree.THU_ggH_PT60_13TeV))
-        except:
-            pass
-        
-        return modifiedEventDictionary
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
+            
     def CreatePT60DownDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_PT60_pth_DOWN*(1.0-theTree.THU_ggH_PT60_13TeV))
-        
-        return modifiedEventDictionary
+        try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_PT60_pth_DOWN*(1.0-theTree.THU_ggH_PT60_13TeV))
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
+
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreatePT120UpDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_PT120_pth_UP*(1.0+theTree.THU_ggH_PT120_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreatePT120DownDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_PT120_pth_DOWN*(1.0-theTree.THU_ggH_PT120_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateqmtopUpDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_qmtop_pth_UP*(1.0+theTree.THU_ggH_qmtop_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
 
     def CreateqmtopDownDictionary(self,theTree,nominalEventDictionary):
-        modifiedEventDictionary = nominalEventDictionary.Clone()
         try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
             modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_qmtop_pth_DOWN*(1.0-theTree.THU_ggH_qmtop_13TeV))
-        except:
-            pass
+            if modifiedEventDictionary.Weight == 0:
+                return nominalEventDictionary
 
-        return modifiedEventDictionary
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
