@@ -2,7 +2,7 @@ from Samples.SampleDefinition import Sample
 from Samples.Uncertainties.UserUncertainties.TES import TESUncertainty
 from Samples.Uncertainties.UserUncertainties.Signal_JES_17 import JES17Uncertainty
 from Samples.Uncertainties.UserUncertainties.JER import JERUncertainty
-#from Samples.Uncertainties.UserUncertainties.ggHTheory import ggHTheoryUncertainty
+from Samples.Uncertainties.UserUncertainties.ggHTheory import ggHTheoryUncertainty
 from Samples.Uncertainties.UserUncertainties.MetRecoil import MetRecoilUncertainty
 from Samples.Uncertainties.UserUncertainties.MuonES import MuonESUncertainty
 from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertainty
@@ -34,13 +34,12 @@ ggHSample.files = ['ggH.root',
                    'WminusHWW.root',
                    'ZHWW.root',
                    'GGZHWW.root']
-#ggHSample.files = ['WHPlus.root']
 ggHSample.definition = 'is_Fiducial == 0.0'
 ggHSample.uncertainties = [
     TESUncertainty(),
     JES17Uncertainty(),
     JERUncertainty(),
-    #ggHTheoryUncertainty(),
+    ggHTheoryUncertainty(),
     MetRecoilUncertainty(),
     MuonESUncertainty(),
     PrefiringUncertainty(),
