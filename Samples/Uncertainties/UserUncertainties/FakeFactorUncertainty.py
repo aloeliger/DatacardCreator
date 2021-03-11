@@ -383,11 +383,13 @@ class FakeFactorUncertainty(Uncertainty):
         return modifiedEventDictionary
     def CreatePTHClosureUncUpDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.pthclosure_w_up
+        #modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.pthclosure_w_up
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.mtclosure_w_njets_pth_ljpt_up
         return modifiedEventDictionary
     def CreatePTHClosureUncDownDictionary(self,theTree,nominalEventDictionary):
         modifiedEventDictionary = nominalEventDictionary.Clone()
-        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.pthclosure_w_down
+        #modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.pthclosure_w_down
+        modifiedEventDictionary.Weight = theTree.FinalWeighting * theTree.mtclosure_w_njets_pth_ljpt_down
         return modifiedEventDictionary
 
     def CreateNJet0NormUpDictionary(self,theTree,nominalEventDictionary):
