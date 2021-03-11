@@ -24,7 +24,7 @@ class ggH_NJets_Differential_QCDScale_Uncertainty(Uncertainty):
             modifiedEventDictionary.Weight = theTree.FinalWeighting_QCDScaleAcceptance_Differential_ggH_njets3UP
         elif theTree.Rivet_nJets30 >= 4:
             modifiedEventDictionary.Weight = theTree.FinalWeighting_QCDScaleAcceptance_Differential_ggH_njets4UP
-       if modifiedEventDictionary.Weight == 0:
+        if modifiedEventDictionary.Weight == 0:
             return nominalEventDictionary
         return modifiedEventDictionary
 
