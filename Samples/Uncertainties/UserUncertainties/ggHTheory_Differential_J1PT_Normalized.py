@@ -229,13 +229,13 @@ class ggHTheory_Differential_J1PT_Normalized_Uncertainty(Uncertainty):
         except:
             return nominalEventDictionary
 
-        def CreateqmtopDownDictionary(self,theTree,nominalEventDictionary):
-            try:
-                modifiedEventDictionary = nominalEventDictionary.Clone()
-                modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_qmtop_j1pt_DOWN*(1.0-theTree.THU_ggH_qmtop_13TeV))
-                if modifiedEventDictionary.Weight == 0:
-                    return nominalEventDictionary
-
-                return modifiedEventDictionary
-            except:
+    def CreateqmtopDownDictionary(self,theTree,nominalEventDictionary):
+        try:
+            modifiedEventDictionary = nominalEventDictionary.Clone()
+            modifiedEventDictionary.Weight = (theTree.FinalWeighting_ggHTheoryNormalization_qmtop_j1pt_DOWN*(1.0-theTree.THU_ggH_qmtop_13TeV))
+            if modifiedEventDictionary.Weight == 0:
                 return nominalEventDictionary
+
+            return modifiedEventDictionary
+        except:
+            return nominalEventDictionary
