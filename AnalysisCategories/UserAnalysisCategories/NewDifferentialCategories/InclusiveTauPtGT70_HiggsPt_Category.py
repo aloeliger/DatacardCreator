@@ -16,7 +16,8 @@ def IsInHighTauPtCategory(theAnalysisCategory,theEventDictionary):
 HighTauPtCategory = AnalysisCategoryDef.AnalysisCategory()
 HighTauPtCategory.name = 'htt_PTH_mt_HighTauPt'
 HighTauPtCategory.IsInCategory = IsInHighTauPtCategory
-HighTauPtCategory.rollingVariable = 'HiggsPt'
+HighTauPtCategory.rollingVariable = 'differentialHiggsPt'
 HighTauPtCategory.rollingBins = [0,45,80,120,200,350,450,100000000]
 HighTauPtCategory.reconstructionVariable = 'M_sv'
 HighTauPtCategory.reconstructionBins = [50.0,70.0,90.0,110.0,130.0,150.0,170.0,210.0,250.0,290.0]
+#HighTauPtCategory.reconstructionBins = [75.0,90.0,105.0,120.0,135.0,150.0,170.0,190.0,210,250.0]

@@ -62,7 +62,8 @@ def FillMuTauConstructedQuantities(theEventDictionary,theBasicQuantities):
                               theBasicQuantities["SLJetEta"],
                               0.0)
     MVis = (tauVector+muVector).M()
-    HiggsPt = (tauVector+muVector+METVector).Pt() * 1.05 #factor added here for differential. This is the calculated shift off gen truth.
+    HiggsPt = (tauVector+muVector+METVector).Pt()
+    differentialHiggsPt = (tauVector+muVector+METVector).Pt() * 1.05 #factor added here for differential. This is the calculated shift off gen truth.
     MT = math.sqrt(2.0*muVector.Pt()*METVector.Pt()*(1.0-math.cos(muVector.DeltaPhi(METVector))))
     Higgs_jjPt = (tauVector+muVector+METVector+jetOneVector+jetTwoVector).Pt()
     DeltaR = tauVector.DeltaR(muVector)    
@@ -70,6 +71,7 @@ def FillMuTauConstructedQuantities(theEventDictionary,theBasicQuantities):
         "MT": MT,
         "MVis": MVis,
         "HiggsPt": HiggsPt,
+        "differentialHiggsPt": differentialHiggsPt,
         "Higgs_jjPt": Higgs_jjPt,
         "DeltaR":DeltaR,
         "DEtaJJ": (abs(jetOneVector.Eta()-jetTwoVector.Eta())),

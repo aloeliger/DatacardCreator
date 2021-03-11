@@ -9,6 +9,7 @@ def IsInIntermediateTauPtCategory(theAnalysisCategory,theEventDictionary):
             and theEventDictionary.eventDictionary["TauPt"] <= 70.0
             and not (theEventDictionary.eventDictionary['Njets'] == 0 and theEventDictionary.eventDictionary['DeltaR'] < 2.0)
             and not (abs(theEventDictionary.eventDictionary['TauEta'])>0.2 and abs(theEventDictionary.eventDictionary['TauEta'])<0.3)
+            #and theEventDictionary.eventDictionary['MET'] < 100.0
     ):
         return True
     else:
@@ -18,7 +19,8 @@ def IsInIntermediateTauPtCategory(theAnalysisCategory,theEventDictionary):
 IntermediateTauPtCategory = AnalysisCategoryDef.AnalysisCategory()
 IntermediateTauPtCategory.name = 'htt_PTH_mt_IntermediateTauPt'
 IntermediateTauPtCategory.IsInCategory = IsInIntermediateTauPtCategory
-IntermediateTauPtCategory.rollingVariable = 'HiggsPt'
+IntermediateTauPtCategory.rollingVariable = 'differentialHiggsPt'
 IntermediateTauPtCategory.rollingBins = [0,45,80,120,200,350,100000000]
 IntermediateTauPtCategory.reconstructionVariable = 'M_sv'
 IntermediateTauPtCategory.reconstructionBins = [50.0,70.0,90.0,110.0,130.0,150.0,170.0,210.0,250.0,290.0]
+#IntermediateTauPtCategory.reconstructionBins = [75.0,90.0,105.0,120.0,135.0,150.0,170.0,190.0,210,250.0]
