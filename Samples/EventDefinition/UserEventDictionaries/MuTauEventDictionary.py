@@ -1,6 +1,11 @@
 import ROOT
 from Samples.EventDefinition.EventDictionary import EventDictionary
 import math
+import os
+
+currentLocation = os.path.dirname(__file__)
+differentialHiggsPtCorrectionFile = ROOT.TFile(os.path.join(currentLocation,"RootFiles/pthcorrection_et.root"))
+differentialHiggsPtCorrectionFunction = differentialHiggsPtCorrectionFile.Get("pth_correction")
 
 def FillMuTauBasicQuantities(theEventDictionary,theTree):
     muVector = ROOT.TLorentzVector()
@@ -63,7 +68,7 @@ def FillMuTauConstructedQuantities(theEventDictionary,theBasicQuantities):
                               0.0)
     MVis = (tauVector+muVector).M()
     HiggsPt = (tauVector+muVector+METVector).Pt()
-    differentialHiggsPt = (tauVector+muVector+METVector).Pt() * 1.05 #factor added here for differential. This is the calculated shift off gen truth.
+    differentialHiggsPt = HiggsPt * differentialHiggsPtCorrectionFunction.Eval(HiggsPt) #This factor now needs to change to reflect the correction factor. That needs to be added in here.
     MT = math.sqrt(2.0*muVector.Pt()*METVector.Pt()*(1.0-math.cos(muVector.DeltaPhi(METVector))))
     Higgs_jjPt = (tauVector+muVector+METVector+jetOneVector+jetTwoVector).Pt()
     DeltaR = tauVector.DeltaR(muVector)    
