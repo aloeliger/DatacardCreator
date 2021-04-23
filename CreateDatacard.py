@@ -44,6 +44,8 @@ if __name__ == "__main__":
     for sampleFile in args.SampleConfigFiles:
         outputSamples.append(LoadSample(sampleFile,theLoader))
 
+    outputFile = ROOT.TFile(args.OutputFileName,"RECREATE")    #create our output file here to make it current
+
     #ths should be where the magic happens and all our histograms get filled.
     for outputSample in outputSamples:
         print("Processing sample: "+outputSample.name)
@@ -71,7 +73,6 @@ if __name__ == "__main__":
     #we should now be done with all of our samples, all histograms filled.
     #let's get them, unroll them, and store them away.
     #start with making the directories we're going to want.
-    outputFile = ROOT.TFile(args.OutputFileName,"RECREATE")    
     directories = {}    
     for analysisCategory in analysisCategories:
         directories[analysisCategory.name] = outputFile.mkdir(analysisCategory.name)
