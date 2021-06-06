@@ -10,6 +10,7 @@ from Samples.Uncertainties.UserUncertainties.Prefiring import PrefiringUncertain
 from Samples.Uncertainties.UserUncertainties.TauID import TauIDUncertainty
 from Samples.Uncertainties.UserUncertainties.Trigger16 import Trigger16Uncertainty
 from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.PTH_QCD_Uncertainties.ggH_PTH_Differential_QCDScale_Uncertainty import ggH_PTH_Differential_QCDScale_Uncertainty
+from Samples.Uncertainties.UserUncertainties.HiggsPtUncertainty import HiggsPtUncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -29,6 +30,8 @@ ggHSample.uncertainties = [
     TauIDUncertainty(),
     Trigger16Uncertainty(),
     ggH_PTH_Differential_QCDScale_Uncertainty(),
+    HiggsPtUncertainty(),
+
 ]
 ggHSample.eventDictionaryInstance = MuTauEventDictionary
 ggHSample.CreateEventWeight = ggHSample.CreateEventWeight_Standard

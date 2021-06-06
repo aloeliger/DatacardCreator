@@ -12,6 +12,7 @@ from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.Differen
 from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.PTH_QCD_Uncertainties.VH_PTH_Differential_QCDScale_Uncertainty import VH_PTH_Differential_QCDScale_Uncertainty
 from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.PTH_QCD_Uncertainties.qqH_PTH_Differential_QCDScale_Uncertainty import qqH_PTH_Differential_QCDScale_Uncertainty
 from Samples.Uncertainties.UserUncertainties.QCDAcceptanceUncertainties.DifferentialUncertainties.PTH_QCD_Uncertainties.ttH_PTH_Differential_QCDScale_Uncertainty import ttH_PTH_Differential_QCDScale_Uncertainty
+from Samples.Uncertainties.UserUncertainties.HiggsPtUncertainty import HiggsPtUncertainty
 
 from Samples.EventDefinition.UserEventDictionaries.MuTauEventDictionary import MuTauEventDictionary
 
@@ -34,6 +35,8 @@ VBFSample.uncertainties = [
     VH_PTH_Differential_QCDScale_Uncertainty(),
     qqH_PTH_Differential_QCDScale_Uncertainty(),
     ttH_PTH_Differential_QCDScale_Uncertainty(),
+        HiggsPtUncertainty(),
+
 ]
 VBFSample.eventDictionaryInstance = MuTauEventDictionary
 VBFSample.CreateEventWeight = VBFSample.CreateEventWeight_Standard
